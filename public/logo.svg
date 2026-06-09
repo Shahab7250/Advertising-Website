@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Black circle background -->
+  <circle cx="100" cy="100" r="98" fill="#0d0d0d"/>
+
+  <!-- Outer gold ring -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#C9A84C" stroke-width="0.6"/>
+
+  <!-- Inner gold ring -->
+  <circle cx="100" cy="100" r="72" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="68" fill="none" stroke="#C9A84C" stroke-width="0.6"/>
+
+  <!-- Decorative diamond/star shapes at 4 compass points (between rings) -->
+  <!-- Top -->
+  <polygon points="100,75 103,78 100,81 97,78" fill="#C9A84C"/>
+  <!-- Bottom -->
+  <polygon points="100,119 103,122 100,125 97,122" fill="#C9A84C"/>
+  <!-- Left -->
+  <polygon points="75,100 78,97 81,100 78,103" fill="#C9A84C"/>
+  <!-- Right -->
+  <polygon points="119,100 122,97 125,100 122,103" fill="#C9A84C"/>
+
+  <!-- Decorative corner flourishes (small dots between rings) -->
+  <circle cx="100" cy="82" r="1.2" fill="#C9A84C"/>
+  <circle cx="100" cy="118" r="1.2" fill="#C9A84C"/>
+  <circle cx="82" cy="100" r="1.2" fill="#C9A84C"/>
+  <circle cx="118" cy="100" r="1.2" fill="#C9A84C"/>
+
+  <!-- Scrollwork decorations on sides -->
+  <!-- Left scroll -->
+  <path d="M 30 95 Q 25 90 28 85 Q 32 80 36 85 Q 38 90 34 92" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
+  <path d="M 30 105 Q 25 110 28 115 Q 32 120 36 115 Q 38 110 34 108" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
+  <!-- Right scroll -->
+  <path d="M 170 95 Q 175 90 172 85 Q 168 80 164 85 Q 162 90 166 92" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
+  <path d="M 170 105 Q 175 110 172 115 Q 168 120 164 115 Q 162 110 166 108" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
+
+  <!-- "New Crown Art" curved text at top -->
+  <path id="topArc" d="M 25,100 A 75,75 0 0,1 175,100" fill="none"/>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="13" fill="white" font-weight="bold" letter-spacing="2">
+    <textPath href="#topArc" startOffset="7%">New Crown Art</textPath>
+  </text>
+
+  <!-- "T. Model School, Gaya" curved text at bottom -->
+  <path id="bottomArc" d="M 28,108 A 75,75 0 0,0 172,108" fill="none"/>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="10.5" fill="white" font-style="italic" letter-spacing="1">
+    <textPath href="#bottomArc" startOffset="5%">T. Model School, Gaya</textPath>
+  </text>
+
+  <!-- NCR Monogram center - N -->
+  <text x="62" y="112" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="white" font-weight="bold" font-style="italic" opacity="0.95">N</text>
+
+  <!-- C overlapping -->
+  <text x="82" y="108" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="white" font-weight="bold" font-style="italic" opacity="0.9">C</text>
+
+  <!-- R -->
+  <text x="108" y="112" font-family="Georgia, 'Times New Roman', serif" font-size="48" fill="white" font-weight="bold" font-style="italic" opacity="0.95">R</text>
+
+  <!-- Gold accent line under monogram -->
+  <line x1="68" y1="116" x2="132" y2="116" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
+</svg>
