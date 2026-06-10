@@ -4,7 +4,7 @@ export default function TestimonialCard({ text, name, location, rating = 5 }) {
   return (
     <article className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 card-hover relative">
       {/* Quote icon */}
-      <div className="absolute top-4 right-4 text-red-100">
+      <div className="absolute top-4 right-4 text-blue-100">
         <Quote size={36} aria-hidden="true" />
       </div>
 

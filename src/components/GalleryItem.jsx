@@ -33,7 +33,7 @@ export default function GalleryItem({ item, index, onClick }) {
   return (
     <button
       type="button"
-      className="group relative w-full aspect-square overflow-hidden rounded-xl cursor-pointer focus-visible:ring-2 focus-visible:ring-[#DC2626] focus-visible:ring-offset-2"
+      className="group relative w-full aspect-square overflow-hidden rounded-xl cursor-pointer focus-visible:ring-2 focus-visible:ring-[#1E3A8A] focus-visible:ring-offset-2"
       onClick={() => onClick(index)}
       aria-label={`View ${item.title} — ${item.category}`}
     >

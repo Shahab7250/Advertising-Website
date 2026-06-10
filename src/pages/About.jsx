@@ -4,11 +4,12 @@ import {
   Target, Eye, Shield, Palette, Lightbulb,
   Heart, Award, Clock, ChevronRight, Home,
   Users, Star, ArrowRight, CheckCircle, Zap,
+  Wrench, MapPin,
 } from 'lucide-react'
 import StatsBar from '../components/StatsBar'
 
 const coreValues = [
-  { icon: Shield, label: 'Quality First', desc: 'We never compromise on material quality or workmanship standards.', color: '#DC2626' },
+  { icon: Shield, label: 'Quality First', desc: 'We never compromise on material quality or workmanship standards.', color: '#1E3A8A' },
   { icon: Palette, label: 'Creative Design', desc: 'Every design is crafted uniquely to represent your brand identity.', color: '#1D4ED8' },
   { icon: Lightbulb, label: 'Innovation', desc: 'We stay ahead with the latest techniques and premium materials.', color: '#F59E0B' },
   { icon: Heart, label: 'Client Satisfaction', desc: 'Your satisfaction and success is our ultimate goal always.', color: '#EC4899' },
@@ -18,16 +19,34 @@ const coreValues = [
 
 const milestones = [
   { year: '2015', title: 'Company Founded', desc: 'New Crown Art was established in Gaya, Bihar, with a vision to deliver premium signage solutions.' },
-  { year: '2017', title: 'Pan-India Expansion', desc: 'Expanded services across multiple states, serving clients from Delhi to Hyderabad.' },
+  { year: '2017', title: "Gaya's Most Trusted Signage Shop", desc: 'Became the most recommended offline signage and advertising workshop in Gaya, Bihar — known locally for unmatched quality and reliability.' },
   { year: '2020', title: '1000+ Projects Milestone', desc: 'Successfully completed over 1,000 projects across various industries and business types.' },
   { year: '2023', title: '10+ Years Excellence', desc: 'Celebrated a decade of delivering quality signage and branding solutions across India.' },
   { year: '2025', title: '2000+ Happy Clients', desc: 'Reached 2000+ successful projects with 10,000+ satisfied clients nationwide.' },
 ]
 
-const teamMembers = [
-  { name: 'Rajesh Kumar', role: 'Founder & Creative Director', initial: 'R', color: 'from-red-500 to-orange-500' },
-  { name: 'Sunita Sharma', role: 'Design Lead', initial: 'S', color: 'from-blue-500 to-indigo-600' },
-  { name: 'Vikram Singh', role: 'Production Manager', initial: 'V', color: 'from-green-500 to-teal-600' },
+const workshopHighlights = [
+  {
+    icon: Wrench,
+    title: 'In-House Manufacturing',
+    desc: 'Every sign board, flex banner, and acrylic letter is crafted right here in our Gaya workshop — full quality control from raw material to finished product.',
+    color: '#1E3A8A',
+    gradient: 'from-blue-50 to-white',
+  },
+  {
+    icon: MapPin,
+    title: 'Walk-In Welcome',
+    desc: 'Visit our workshop at Gaya, Bihar anytime. See materials, discuss your project face-to-face, and get an instant quote — no appointment needed.',
+    color: '#059669',
+    gradient: 'from-green-50 to-white',
+  },
+  {
+    icon: Zap,
+    title: 'Fast Turnaround',
+    desc: 'Local production means faster delivery. Most projects are completed within 3–7 working days with same-day emergency services available on request.',
+    color: '#D97706',
+    gradient: 'from-amber-50 to-white',
+  },
 ]
 
 export default function About() {
@@ -101,7 +120,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-[#DC2626] font-bold text-xs uppercase tracking-widest">Who We Are</span>
+              <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">Who We Are</span>
               <h2 id="about-text-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-3 mb-6">
                 Your Trusted Partner in Signage & Branding
               </h2>
@@ -119,10 +138,10 @@ export default function About() {
 
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
-                  { icon: CheckCircle, text: 'Premium quality materials', color: '#DC2626' },
-                  { icon: CheckCircle, text: 'Pan-India service coverage', color: '#DC2626' },
-                  { icon: CheckCircle, text: 'On-time project delivery', color: '#DC2626' },
-                  { icon: CheckCircle, text: 'Expert design consultation', color: '#DC2626' },
+                  { icon: CheckCircle, text: 'Premium quality materials', color: '#1E3A8A' },
+                  { icon: CheckCircle, text: 'Pan-India service coverage', color: '#1E3A8A' },
+                  { icon: CheckCircle, text: 'On-time project delivery', color: '#1E3A8A' },
+                  { icon: CheckCircle, text: 'Expert design consultation', color: '#1E3A8A' },
                 ].map(({ icon: Icon, text, color }) => (
                   <div key={text} className="flex items-center gap-2.5 text-sm text-gray-700">
                     <Icon size={16} style={{ color }} className="shrink-0" aria-hidden="true" />
@@ -133,7 +152,7 @@ export default function About() {
 
               <Link
                 to="/quote"
-                className="inline-flex items-center gap-2 bg-[#DC2626] hover:bg-red-700 text-white font-bold px-7 py-3.5 rounded-xl transition-all mt-8 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white font-bold px-7 py-3.5 rounded-xl transition-all mt-8 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
                 Start a Project
                 <ArrowRight size={18} aria-hidden="true" />
@@ -158,7 +177,7 @@ export default function About() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white text-xs font-bold bg-[#DC2626] px-2.5 py-1 rounded-full">{label}</span>
+                    <span className="text-white text-xs font-bold bg-[#1E3A8A] px-2.5 py-1 rounded-full">{label}</span>
                   </div>
                 </div>
               ))}
@@ -174,10 +193,10 @@ export default function About() {
       <section
         className="py-20 relative overflow-hidden"
         aria-labelledby="milestones-heading"
-        style={{ background: 'linear-gradient(135deg, #0a0a16 0%, #1a0505 50%, #0a0a16 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #0a0a16 0%, #060c1a 50%, #0a0a16 100%)' }}
       >
         <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="grid grid-cols-5 h-full opacity-[0.09]">
+          <div className="grid grid-cols-5 h-full opacity-[0.18]">
             {[
               'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
               'https://5.imimg.com/data5/OF/FY/BU/SELLER-3380324/glow-sign-board-1000x1000.jpg',
@@ -188,7 +207,7 @@ export default function About() {
               <div key={i} style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100%' }} />
             ))}
           </div>
-          <div className="absolute inset-0" style={{ background: 'rgba(10,10,22,0.89)' }} />
+          <div className="absolute inset-0" style={{ background: 'rgba(10,10,22,0.80)' }} />
         </div>
 
         <div className="max-w-4xl mx-auto px-4 relative z-10">
@@ -201,7 +220,7 @@ export default function About() {
 
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-[22px] sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#DC2626] via-[#C9A84C] to-[#DC2626]" aria-hidden="true" />
+            <div className="absolute left-[22px] sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#1E3A8A] via-[#C9A84C] to-[#1E3A8A]" aria-hidden="true" />
 
             <div className="space-y-8">
               {milestones.map(({ year, title, desc }, i) => (
@@ -213,7 +232,7 @@ export default function About() {
                   {/* Content */}
                   <div className={`pl-12 sm:pl-0 sm:w-[45%] ${i % 2 === 0 ? 'sm:text-right sm:pr-10' : 'sm:pl-10'}`}>
                     <div
-                      className="inline-block bg-[#DC2626] text-white text-xs font-black px-3 py-1.5 rounded-full mb-2 tracking-wider"
+                      className="inline-block bg-[#1E3A8A] text-white text-xs font-black px-3 py-1.5 rounded-full mb-2 tracking-wider"
                     >
                       {year}
                     </div>
@@ -237,27 +256,31 @@ export default function About() {
       <section className="py-20 bg-[#F9FAFB]" aria-labelledby="mission-vision-heading">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-[#DC2626] font-bold text-xs uppercase tracking-widest">Purpose & Direction</span>
+            <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">Purpose & Direction</span>
             <h2 id="mission-vision-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-3">
               Our Mission &amp; Vision
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
-              <div className="w-14 h-14 bg-red-50 group-hover:bg-red-100 rounded-2xl flex items-center justify-center mb-6 transition-colors">
-                <Target size={28} className="text-[#DC2626]" aria-hidden="true" />
+            <div className="bg-gradient-to-br from-[#1E3A8A]/8 to-white rounded-2xl p-8 shadow-sm border-2 border-[#1E3A8A]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]" />
+              <div className="w-14 h-14 bg-gradient-to-br from-[#1E3A8A]/20 to-[#3B82F6]/15 rounded-2xl flex items-center justify-center mb-6 shadow-md border border-[#1E3A8A]/20 group-hover:scale-110 transition-transform duration-300">
+                <Target size={28} className="text-[#1E3A8A]" aria-hidden="true" />
               </div>
+              <span className="inline-block bg-[#1E3A8A] text-white text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wider uppercase">Mission</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 To help businesses increase their visibility and brand recognition through high-quality signage, printing, and branding solutions. We strive to be the most reliable and creative advertising partner for every client.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
-              <div className="w-14 h-14 bg-blue-50 group-hover:bg-blue-100 rounded-2xl flex items-center justify-center mb-6 transition-colors">
-                <Eye size={28} className="text-[#1D4ED8]" aria-hidden="true" />
+            <div className="bg-gradient-to-br from-[#C9A84C]/8 to-white rounded-2xl p-8 shadow-sm border-2 border-[#C9A84C]/25 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-[#C9A84C] to-[#FFD700]" />
+              <div className="w-14 h-14 bg-gradient-to-br from-[#C9A84C]/20 to-[#FFD700]/15 rounded-2xl flex items-center justify-center mb-6 shadow-md border border-[#C9A84C]/25 group-hover:scale-110 transition-transform duration-300">
+                <Eye size={28} className="text-[#C9A84C]" aria-hidden="true" />
               </div>
+              <span className="inline-block bg-gradient-to-r from-[#C9A84C] to-[#A07832] text-white text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wider uppercase">Vision</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Vision</h3>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 To become one of the most trusted and innovative signage solution providers in India by delivering exceptional quality and customer satisfaction — leading through creativity, technology, and unmatched service.
               </p>
             </div>
@@ -269,7 +292,7 @@ export default function About() {
       <section className="py-20 bg-white" aria-labelledby="values-heading">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-[#DC2626] font-bold text-xs uppercase tracking-widest">What We Stand For</span>
+            <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">What We Stand For</span>
             <h2 id="values-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-3">
               Our Core Values
             </h2>
@@ -278,55 +301,56 @@ export default function About() {
             {coreValues.map(({ icon: Icon, label, desc, color }, i) => (
               <div
                 key={label}
-                className="rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 bg-[#F9FAFB] group animate-fade-in-up"
-                style={{ animationDelay: `${i * 0.08}s` }}
+                className="rounded-2xl p-6 border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white group animate-fade-in-up relative overflow-hidden"
+                style={{ borderColor: `${color}30`, animationDelay: `${i * 0.08}s` }}
               >
+                <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={{ background: color }} />
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
-                  style={{ backgroundColor: `${color}15` }}
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                  style={{ backgroundColor: `${color}18`, border: `1.5px solid ${color}30` }}
                   aria-hidden="true"
                 >
                   <Icon size={22} style={{ color }} />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{label}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+                <span className="inline-block text-xs font-bold px-2.5 py-1 rounded-full mb-3" style={{ backgroundColor: `${color}12`, color }}>
+                  {label}
+                </span>
+                <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 bg-[#F9FAFB]" aria-labelledby="team-heading">
-        <div className="max-w-5xl mx-auto px-4">
+      {/* Workshop Highlights */}
+      <section className="py-20 bg-[#F9FAFB]" aria-labelledby="workshop-heading">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-[#DC2626] font-bold text-xs uppercase tracking-widest">The People Behind the Work</span>
-            <h2 id="team-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-3 mb-3">
-              Our Expert Team
+            <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">Why Come to Us</span>
+            <h2 id="workshop-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-3 mb-3">
+              Your Local Signage Workshop in Gaya
             </h2>
-            <p className="text-gray-500 max-w-md mx-auto">
-              Skilled professionals dedicated to delivering exceptional signage and branding.
+            <p className="text-gray-500 max-w-lg mx-auto">
+              We are a fully offline workshop — walk in, see our work, discuss your needs, and get it done right here in Gaya, Bihar.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {teamMembers.map(({ name, role, initial, color }) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
+            {workshopHighlights.map(({ icon: Icon, title, desc, color, gradient }, i) => (
               <div
-                key={name}
-                className="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                key={title}
+                className={`bg-gradient-to-br ${gradient} rounded-2xl p-7 shadow-sm border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group animate-fade-in-up`}
+                style={{ borderColor: `${color}30`, animationDelay: `${i * 0.1}s` }}
               >
                 <div
-                  className={`w-20 h-20 rounded-full bg-gradient-to-br ${color} text-white text-3xl font-black flex items-center justify-center mx-auto mb-5 shadow-lg`}
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md"
+                  style={{ backgroundColor: `${color}18`, border: `1.5px solid ${color}35` }}
                   aria-hidden="true"
                 >
-                  {initial}
+                  <Icon size={26} style={{ color }} />
                 </div>
-                <h3 className="font-bold text-gray-900">{name}</h3>
-                <p className="text-sm text-gray-500 mt-1.5 mb-3">{role}</p>
-                <div className="flex justify-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={13} className="text-amber-400 fill-amber-400" aria-hidden="true" />
-                  ))}
-                </div>
+                <div className="w-8 h-1 rounded-full mb-4" style={{ backgroundColor: color }} />
+                <h3 className="font-black text-gray-900 text-lg mb-3">{title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

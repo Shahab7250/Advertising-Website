@@ -13,7 +13,7 @@ const services = [
     icon: Layers,
     name: 'ACP Sign Boards',
     description: 'Aluminium composite panel boards are weather-resistant and provide a sleek, modern look for any business facade. Ideal for storefronts and commercial buildings.',
-    color: '#DC2626',
+    color: '#1E3A8A',
     image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/593347818/YE/PW/YL/45293610/acp-sign-board-500x500.jpg',
   },
   {
@@ -69,7 +69,7 @@ const services = [
     icon: Radio,
     name: 'Hoardings',
     description: 'Large-format outdoor hoardings for maximum brand visibility in high-traffic areas. Perfect for product launches, brand awareness campaigns, and events.',
-    color: '#DC2626',
+    color: '#1E3A8A',
     image: 'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
   },
   {
@@ -97,7 +97,7 @@ const services = [
     icon: BookOpen,
     name: 'Brochures',
     description: 'Multi-page marketing brochure design and printing. From bi-fold to catalog formats, we create brochures that effectively communicate your offerings.',
-    color: '#DC2626',
+    color: '#1E3A8A',
     image: 'https://5.imimg.com/data5/SELLER/Default/2020/11/GS/ON/WX/13823199/brochure-printing-services-1000x1000.jpg',
   },
   {
@@ -139,7 +139,7 @@ const services = [
     icon: Radio,
     name: 'Outdoor Advertising',
     description: 'Complete outdoor advertising campaign solutions including hoardings, bus shelters, kiosks, and transit media for maximum reach.',
-    color: '#DC2626',
+    color: '#1E3A8A',
     image: 'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
   },
   {
@@ -207,14 +207,14 @@ export default function Services() {
       <section className="py-20 bg-[#F9FAFB]" aria-labelledby="services-grid-heading">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="inline-block w-12 h-1 bg-[#DC2626] rounded mb-4" aria-hidden="true" />
+            <span className="inline-block w-12 h-1 bg-[#1E3A8A] rounded mb-4" aria-hidden="true" />
             <h2 id="services-grid-heading" className="text-3xl font-black text-gray-900">
               21 Specialised Services
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               Everything your business needs for visual branding, advertising, and signage — all under one roof.
             </p>
-            <span className="inline-block mt-4 bg-[#DC2626] text-white text-xs font-bold px-3 py-1 rounded-full">21 Services Available</span>
+            <span className="inline-block mt-4 bg-[#1E3A8A] text-white text-xs font-bold px-3 py-1 rounded-full">21 Services Available</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -247,7 +247,7 @@ export default function Services() {
                     href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors w-full justify-center"
+                    className="mt-4 inline-flex items-center gap-2 bg-green-500/70 hover:bg-green-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors w-full justify-center"
                   >
                     <MessageCircle size={16} />
                     Get Inquiry on WhatsApp
@@ -260,17 +260,17 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#DC2626] py-16">
+      <section className="bg-[#1E3A8A] py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black text-white mb-4">
             Can't find what you need?
           </h2>
-          <p className="text-red-100 mb-8">
+          <p className="text-blue-100 mb-8">
             Contact us directly and we'll create a custom solution tailored to your business requirements.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-white text-[#DC2626] hover:bg-gray-100 font-bold px-8 py-4 rounded-xl transition-all"
+            className="inline-flex items-center gap-2 bg-white text-[#1E3A8A] hover:bg-gray-100 font-bold px-8 py-4 rounded-xl transition-all"
           >
             Contact Us
             <ChevronRight size={18} aria-hidden="true" />

@@ -160,8 +160,8 @@ export default function Gallery() {
                   onClick={() => setActive(cat)}
                   className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 ${
                     active === cat
-                      ? 'bg-[#DC2626] text-white shadow-md'
-                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-red-200'
+                      ? 'bg-[#1E3A8A] text-white shadow-md'
+                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-blue-200'
                   }`}
                 >
                   {cat}

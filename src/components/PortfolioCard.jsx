@@ -47,7 +47,7 @@ const gradients = [
 
 export default function PortfolioCard({ project, index = 0 }) {
   const { name, location, category, description } = project
-  const cat = categoryColors[category] || { bg: 'bg-red-500', text: 'text-red-700', light: 'bg-red-50' }
+  const cat = categoryColors[category] || { bg: 'bg-blue-600', text: 'text-blue-700', light: 'bg-blue-50' }
   const image = projectImages[name]
 
   return (
@@ -75,7 +75,7 @@ export default function PortfolioCard({ project, index = 0 }) {
         <p className="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
         <button
           type="button"
-          className="text-sm font-semibold text-[#DC2626] hover:text-red-700 transition-colors inline-flex items-center gap-1 group"
+          className="text-sm font-semibold text-[#1E3A8A] hover:text-[#1E40AF] transition-colors inline-flex items-center gap-1 group"
         >
           View Details
           <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true" />

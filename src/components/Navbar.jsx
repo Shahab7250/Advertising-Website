@@ -66,7 +66,7 @@ export default function Navbar() {
             <span className="block font-black text-lg text-[#111827] tracking-tight">
               NEW CROWN
             </span>
-            <span className="block font-semibold text-[11px] text-[#DC2626] tracking-widest uppercase -mt-0.5">
+            <span className="block font-semibold text-[11px] text-[#1E3A8A] tracking-widest uppercase -mt-0.5">
               ART
             </span>
           </div>
@@ -81,8 +81,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `nav-link text-sm font-medium transition-colors pb-0.5 ${
                     isActive
-                      ? 'text-[#DC2626] active'
-                      : 'text-gray-700 hover:text-[#DC2626]'
+                      ? 'text-[#1E3A8A] active'
+                      : 'text-gray-700 hover:text-[#1E3A8A]'
                   }`
                 }
                 end={to === '/'}
@@ -97,7 +97,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             to="/quote"
-            className="hidden sm:inline-flex items-center gap-1.5 bg-[#DC2626] hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+            className="hidden sm:inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
           >
             Get Free Quote
           </Link>
@@ -130,8 +130,8 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `block px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                       isActive
-                        ? 'bg-red-50 text-[#DC2626]'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-[#DC2626]'
+                        ? 'bg-blue-50 text-[#1E3A8A]'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-[#1E3A8A]'
                     }`
                   }
                 >
@@ -142,7 +142,7 @@ export default function Navbar() {
             <li className="mt-2">
               <Link
                 to="/quote"
-                className="block text-center bg-[#DC2626] hover:bg-red-700 text-white text-sm font-semibold px-4 py-3 rounded-lg transition-colors"
+                className="block text-center bg-[#1E3A8A] hover:bg-[#1E40AF] text-white text-sm font-semibold px-4 py-3 rounded-lg transition-colors"
               >
                 Get Free Quote
               </Link>

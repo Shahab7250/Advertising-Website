@@ -11,14 +11,14 @@ export default function StatsBar() {
       className="py-12 relative overflow-hidden"
       aria-label="Company statistics"
       style={{
-        background: 'linear-gradient(135deg, #0f0f1a 0%, #1a0505 50%, #0f0f1a 100%)',
+        background: 'linear-gradient(135deg, #0f0f1a 0%, #060c1a 50%, #0f0f1a 100%)',
         borderTop: '1px solid rgba(201,168,76,0.3)',
         borderBottom: '1px solid rgba(201,168,76,0.3)',
       }}
     >
       {/* Signage mosaic background */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="grid grid-cols-4 h-full opacity-[0.12]">
+        <div className="grid grid-cols-4 h-full opacity-[0.22]">
           {[
             'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
             'https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg',
@@ -28,7 +28,7 @@ export default function StatsBar() {
             <div key={i} style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100%' }} />
           ))}
         </div>
-        <div className="absolute inset-0" style={{ background: 'rgba(15,15,26,0.88)' }} />
+        <div className="absolute inset-0" style={{ background: 'rgba(15,15,26,0.78)' }} />
       </div>
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <dl className="grid grid-cols-2 lg:grid-cols-4 gap-8">

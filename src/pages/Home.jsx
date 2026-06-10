@@ -15,7 +15,7 @@ const services = [
     name: 'ACP Sign Boards',
     description: 'Weather-resistant aluminium composite panel boards with a sleek modern look for any business facade.',
     image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/593347818/YE/PW/YL/45293610/acp-sign-board-500x500.jpg',
-    color: '#DC2626',
+    color: '#1E3A8A',
   },
   {
     icon: Lightbulb,
@@ -55,7 +55,7 @@ const services = [
 ]
 
 const whyChooseUs = [
-  { icon: Shield, title: 'Premium Quality Materials', desc: 'Top-grade materials sourced to ensure durability, weather resistance, and a lasting professional look.', color: '#DC2626' },
+  { icon: Shield, title: 'Premium Quality Materials', desc: 'Top-grade materials sourced to ensure durability, weather resistance, and a lasting professional look.', color: '#1E3A8A' },
   { icon: Palette, title: 'Custom Creative Designs', desc: 'Every sign is crafted uniquely — tailored to your brand identity, personality, and business goals.', color: '#1D4ED8' },
   { icon: Clock, title: 'On-Time Delivery', desc: 'We respect your timelines. Projects are completed on schedule without compromising quality.', color: '#059669' },
   { icon: Wrench, title: 'Expert Installation', desc: 'Skilled technicians handle fabrication and on-site installation so you don\'t have to worry.', color: '#D97706' },
@@ -95,17 +95,20 @@ const testimonials = [
   {
     text: 'Excellent quality and timely delivery. New Crown Art transformed our shop front completely. The LED board brings in so many more customers now!',
     name: 'Rahul Sharma',
-    location: 'Delhi',
+    avatarGradient: 'linear-gradient(135deg, #C9A84C 0%, #F59E0B 100%)',
+    accentColor: '#C9A84C',
   },
   {
     text: 'Very professional team. The glow sign board looks amazing and has dramatically increased our visibility. Outstanding value for money.',
     name: 'Priya Patel',
-    location: 'Mumbai',
+    avatarGradient: 'linear-gradient(135deg, #F43F5E 0%, #E11D48 100%)',
+    accentColor: '#F43F5E',
   },
   {
     text: 'Best signage company I have ever worked with. Affordable pricing, superb craftsmanship, and the installation team was excellent. Will definitely order again.',
     name: 'Amit Verma',
-    location: 'Bangalore',
+    avatarGradient: 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)',
+    accentColor: '#3B82F6',
   },
 ]
 
@@ -229,7 +232,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-3 left-3">
-                  <span className="bg-[#DC2626] text-white text-xs font-bold px-2.5 py-1 rounded-full">Hoardings</span>
+                  <span className="bg-[#1E3A8A] text-white text-xs font-bold px-2.5 py-1 rounded-full">Hoardings</span>
                   <p className="text-white font-bold text-sm mt-1">Outdoor Advertising</p>
                 </div>
               </div>
@@ -271,7 +274,7 @@ export default function Home() {
       {/* ---- MARQUEE TICKER ---- */}
       <div
         className="py-4 overflow-hidden"
-        style={{ background: 'linear-gradient(90deg, #DC2626 0%, #991B1B 50%, #DC2626 100%)' }}
+        style={{ background: 'linear-gradient(90deg, #1E3A8A 0%, #1E40AF 50%, #1E3A8A 100%)' }}
         aria-hidden="true"
       >
         <div className="flex gap-8 whitespace-nowrap" style={{ animation: 'marquee 30s linear infinite' }}>
@@ -289,14 +292,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
             <div>
-              <span className="text-[#DC2626] font-bold text-xs uppercase tracking-widest">What We Offer</span>
+              <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">What We Offer</span>
               <h2 id="services-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-2">
                 Our Core Services
               </h2>
             </div>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 text-[#DC2626] font-bold text-sm hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-[#1E3A8A] font-bold text-sm hover:gap-3 transition-all"
             >
               View All 21 Services <ArrowRight size={16} />
             </Link>
@@ -344,11 +347,11 @@ export default function Home() {
       <section
         className="py-20 relative overflow-hidden"
         aria-labelledby="why-heading"
-        style={{ background: 'linear-gradient(135deg, #06060f 0%, #120303 50%, #06060f 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #06060f 0%, #060c1a 50%, #06060f 100%)' }}
       >
         {/* Signage mosaic background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="grid grid-cols-6 h-full opacity-[0.09]">
+          <div className="grid grid-cols-6 h-full opacity-[0.18]">
             {[
               'https://5.imimg.com/data5/SELLER/Default/2026/3/593347818/YE/PW/YL/45293610/acp-sign-board-500x500.jpg',
               'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
@@ -360,10 +363,10 @@ export default function Home() {
               <div key={i} style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100%' }} />
             ))}
           </div>
-          <div className="absolute inset-0" style={{ background: 'rgba(6,6,15,0.88)' }} />
+          <div className="absolute inset-0" style={{ background: 'rgba(6,6,15,0.80)' }} />
         </div>
         <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'radial-gradient(circle at 30% 50%, rgba(220,38,38,0.08) 0%, transparent 60%)',
+          background: 'radial-gradient(circle at 30% 50%, rgba(30,58,138,0.15) 0%, transparent 60%)',
         }} aria-hidden="true" />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -410,7 +413,7 @@ export default function Home() {
       <section className="py-20 bg-[#F9FAFB]" aria-labelledby="process-heading">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-[#DC2626] font-bold text-xs uppercase tracking-widest">Our Process</span>
+            <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">Our Process</span>
             <h2 id="process-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-3 mb-4">
               How We Work
             </h2>
@@ -421,12 +424,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {/* Connecting line (desktop) */}
-            <div className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-[#DC2626] to-[#C9A84C]" aria-hidden="true" />
+            <div className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-[#1E3A8A] to-[#C9A84C]" aria-hidden="true" />
 
             {process.map(({ step, title, desc }, i) => (
               <div key={step} className="relative text-center animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-white font-black text-lg shadow-lg relative z-10"
-                  style={{ background: i === 0 ? '#DC2626' : i === 3 ? '#C9A84C' : '#111827' }}>
+                  style={{ background: i === 0 ? '#1E3A8A' : i === 3 ? '#C9A84C' : '#111827' }}>
                   {step}
                 </div>
                 <h3 className="font-bold text-gray-900 text-base mb-2">{title}</h3>
@@ -438,7 +441,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               to="/quote"
-              className="inline-flex items-center gap-2 bg-[#DC2626] hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               Start Your Project Today
               <ArrowRight size={18} aria-hidden="true" />
@@ -452,14 +455,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
             <div>
-              <span className="text-[#DC2626] font-bold text-xs uppercase tracking-widest">Our Work</span>
+              <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">Our Work</span>
               <h2 id="projects-heading" className="text-3xl sm:text-4xl font-black text-gray-900 mt-2">
                 Featured Projects
               </h2>
             </div>
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 text-[#DC2626] font-bold text-sm hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-[#1E3A8A] font-bold text-sm hover:gap-3 transition-all"
             >
               View Full Portfolio <ArrowRight size={16} />
             </Link>
@@ -481,9 +484,9 @@ export default function Home() {
                     onError={(e) => { e.target.style.display = 'none' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute inset-0 bg-[#DC2626]/0 group-hover:bg-[#DC2626]/20 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-[#1E3A8A]/0 group-hover:bg-[#1E3A8A]/20 transition-colors duration-300" />
                   <div className="absolute top-3 right-3">
-                    <span className="bg-[#DC2626] text-white text-xs font-bold px-3 py-1.5 rounded-full">{category}</span>
+                    <span className="bg-[#1E3A8A] text-white text-xs font-bold px-3 py-1.5 rounded-full">{category}</span>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5">
                     <h3 className="text-white font-black text-lg leading-tight">{name}</h3>
@@ -498,26 +501,15 @@ export default function Home() {
 
       {/* ---- TESTIMONIALS ---- */}
       <section
-        className="py-20 relative overflow-hidden"
+        className="py-24 relative overflow-hidden"
         aria-labelledby="testimonials-heading"
-        style={{ background: 'linear-gradient(135deg, #06060f 0%, #0f0820 100%)' }}
+        style={{ background: 'linear-gradient(160deg, #0F172A 0%, #1E293B 60%, #0F172A 100%)' }}
       >
-        {/* Signage mosaic background */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="grid grid-cols-6 h-full opacity-[0.07]">
-            {[
-              'https://msmarcom.com/wp-content/uploads/2022/08/Retail-Branding-Agency-Gurgaon.jpg',
-              'https://5.imimg.com/data5/SELLER/Default/2024/7/433496266/MY/ZF/KA/142456447/acp-with-acrylic-letters-1000x1000.jpg',
-              'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
-              'https://4.imimg.com/data4/NG/GC/MY-1937680/sign-board-1000x1000.jpg',
-              'https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg',
-              'https://5.imimg.com/data5/KG/FF/MY-29356796/stainless-steel-letter-signage-1000x1000.jpg',
-            ].map((src, i) => (
-              <div key={i} style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100%' }} />
-            ))}
-          </div>
-          <div className="absolute inset-0" style={{ background: 'rgba(6,6,15,0.90)' }} />
-        </div>
+        {/* Subtle grid texture */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.04]" aria-hidden="true"
+          style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        {/* Gold top line */}
+        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent)' }} aria-hidden="true" />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-14">
@@ -525,34 +517,43 @@ export default function Home() {
             <h2 id="testimonials-heading" className="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">
               What Our Clients Say
             </h2>
+            <p className="text-gray-400 max-w-md mx-auto text-sm">Real feedback from businesses we've helped across India.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {testimonials.map(({ text, name, location }, i) => (
+            {testimonials.map(({ text, name, avatarGradient, accentColor }, i) => (
               <div
                 key={name}
-                className="rounded-2xl p-7 border border-white/10 relative animate-fade-in-up"
+                className="rounded-2xl overflow-hidden relative animate-fade-in-up flex flex-col"
                 style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  backdropFilter: 'blur(8px)',
+                  background: 'rgba(255,255,255,0.06)',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(255,255,255,0.10)',
                   animationDelay: `${i * 0.12}s`,
                 }}
               >
-                {/* Quote mark */}
-                <div className="text-6xl font-black text-[#DC2626]/30 leading-none mb-2 font-serif select-none" aria-hidden="true">"</div>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">{text}</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#DC2626] to-[#C9A84C] flex items-center justify-center text-white font-black text-sm">
-                    {name[0]}
-                  </div>
-                  <div>
-                    <p className="text-white font-bold text-sm">{name}</p>
-                    <p className="text-gray-500 text-xs">{location}</p>
-                  </div>
-                  <div className="ml-auto flex gap-0.5">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={12} className="text-amber-400 fill-amber-400" aria-hidden="true" />
-                    ))}
+                {/* Colored top accent bar */}
+                <div className="h-1 w-full shrink-0" style={{ background: avatarGradient }} />
+                <div className="p-7 flex flex-col flex-1">
+                  {/* Quote mark in accent color */}
+                  <div className="text-6xl font-black leading-none mb-3 font-serif select-none" style={{ color: accentColor, opacity: 0.7 }} aria-hidden="true">"</div>
+                  <p className="text-gray-200 text-sm leading-relaxed mb-6 flex-1">{text}</p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+                    <div
+                      className="w-12 h-12 rounded-full flex items-center justify-center text-white font-black text-base shadow-xl shrink-0"
+                      style={{ background: avatarGradient, outline: '2px solid rgba(255,255,255,0.25)', outlineOffset: '2px' }}
+                    >
+                      {name[0]}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-white font-bold text-sm leading-tight">{name}</p>
+                      <p className="text-gray-400 text-xs mt-0.5">Verified Client</p>
+                    </div>
+                    <div className="flex gap-0.5 shrink-0">
+                      {[...Array(5)].map((_, j) => (
+                        <Star key={j} size={11} className="text-amber-400 fill-amber-400" aria-hidden="true" />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -569,7 +570,7 @@ export default function Home() {
       >
         {/* Mosaic background from signage work */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="grid grid-cols-5 h-full opacity-[0.08]">
+          <div className="grid grid-cols-5 h-full opacity-[0.18]">
             {[
               'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
               'https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg',
@@ -580,13 +581,13 @@ export default function Home() {
               <div key={i} style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100%' }} />
             ))}
           </div>
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(6,6,15,0.92) 0%, rgba(15,8,32,0.88) 50%, rgba(6,6,15,0.92) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(6,6,15,0.84) 0%, rgba(6,12,26,0.82) 50%, rgba(6,6,15,0.84) 100%)' }} />
         </div>
         {/* Gold border top */}
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.6) 50%, transparent 100%)' }} aria-hidden="true" />
 
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#C9A84C]/10 border border-[#C9A84C]/30 text-[#C9A84C] text-xs font-bold px-4 py-2 rounded-full mb-6 tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 bg-[#C9A84C]/25 border border-[#C9A84C]/70 text-[#FFD700] text-xs font-bold px-4 py-2 rounded-full mb-6 tracking-widest uppercase shadow-lg shadow-[#C9A84C]/10">
             <Award size={14} aria-hidden="true" /> Free Consultation Available
           </div>
           <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">

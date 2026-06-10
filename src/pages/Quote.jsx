@@ -133,7 +133,7 @@ export default function Quote() {
           <div className="flex flex-wrap gap-3 justify-center mt-4">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 bg-[#DC2626] text-white font-bold px-6 py-3 rounded-xl hover:bg-red-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#1E3A8A] text-white font-bold px-6 py-3 rounded-xl hover:bg-[#1E40AF] transition-colors"
             >
               Back to Home
             </Link>
@@ -212,7 +212,7 @@ export default function Quote() {
                   {/* Full Name */}
                   <div className="sm:col-span-1">
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      Full Name <span className="text-[#DC2626]" aria-label="required">*</span>
+                      Full Name <span className="text-[#1E3A8A]" aria-label="required">*</span>
                     </label>
                     <input
                       id="name"
@@ -225,7 +225,7 @@ export default function Quote() {
                       aria-invalid={!!errors.name}
                       aria-describedby={errors.name ? 'name-error' : undefined}
                       placeholder="Enter your full name"
-                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] ${
+                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
                         errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
                       }`}
                     />
@@ -235,7 +235,7 @@ export default function Quote() {
                   {/* Mobile */}
                   <div>
                     <label htmlFor="mobile" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      Mobile Number <span className="text-[#DC2626]" aria-label="required">*</span>
+                      Mobile Number <span className="text-[#1E3A8A]" aria-label="required">*</span>
                     </label>
                     <input
                       id="mobile"
@@ -248,7 +248,7 @@ export default function Quote() {
                       aria-invalid={!!errors.mobile}
                       aria-describedby={errors.mobile ? 'mobile-error' : undefined}
                       placeholder="e.g. 98765 43210"
-                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] ${
+                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
                         errors.mobile ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
                       }`}
                     />
@@ -267,7 +267,7 @@ export default function Quote() {
                       value={form.email}
                       onChange={handleChange}
                       placeholder="your@email.com"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                     />
                   </div>
 
@@ -283,14 +283,14 @@ export default function Quote() {
                       value={form.businessName}
                       onChange={handleChange}
                       placeholder="Your shop or company name"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                     />
                   </div>
 
                   {/* City */}
                   <div>
                     <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      City <span className="text-[#DC2626]" aria-label="required">*</span>
+                      City <span className="text-[#1E3A8A]" aria-label="required">*</span>
                     </label>
                     <input
                       id="city"
@@ -302,7 +302,7 @@ export default function Quote() {
                       aria-required="true"
                       aria-invalid={!!errors.city}
                       placeholder="Delhi, Mumbai, Bangalore..."
-                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] ${
+                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
                         errors.city ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
                       }`}
                     />
@@ -312,7 +312,7 @@ export default function Quote() {
                   {/* Service */}
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1.5">
-                      Service Required <span className="text-[#DC2626]" aria-label="required">*</span>
+                      Service Required <span className="text-[#1E3A8A]" aria-label="required">*</span>
                     </label>
                     <select
                       id="service"
@@ -322,7 +322,7 @@ export default function Quote() {
                       required
                       aria-required="true"
                       aria-invalid={!!errors.service}
-                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] bg-gray-50 focus:bg-white ${
+                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] bg-gray-50 focus:bg-white ${
                         errors.service ? 'border-red-400 bg-red-50' : 'border-gray-200'
                       }`}
                     >
@@ -344,7 +344,7 @@ export default function Quote() {
                       name="material"
                       value={form.material}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                     >
                       <option value="">Select material...</option>
                       {materialOptions.map((m) => (
@@ -365,7 +365,7 @@ export default function Quote() {
                       value={form.size}
                       onChange={handleChange}
                       placeholder="e.g. 4ft x 2ft"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                     />
                   </div>
 
@@ -382,7 +382,7 @@ export default function Quote() {
                       onChange={handleChange}
                       min="1"
                       placeholder="1"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                     />
                   </div>
 
@@ -396,7 +396,7 @@ export default function Quote() {
                       name="budget"
                       value={form.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                     >
                       <option value="">Select budget range...</option>
                       {budgetOptions.map((b) => (
@@ -417,7 +417,7 @@ export default function Quote() {
                       onChange={handleChange}
                       rows={5}
                       placeholder="Describe your project requirements, design preferences, installation location, etc."
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] resize-none"
                     />
                   </div>
 
@@ -426,7 +426,7 @@ export default function Quote() {
                     <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-1.5">
                       Reference File (Image / PDF)
                     </label>
-                    <div className={`relative border-2 border-dashed rounded-xl p-4 text-center cursor-pointer hover:border-[#DC2626] transition-colors ${
+                    <div className={`relative border-2 border-dashed rounded-xl p-4 text-center cursor-pointer hover:border-[#1E3A8A] transition-colors ${
                       form.file ? 'border-green-400 bg-green-50' : 'border-gray-200 bg-gray-50'
                     }`}>
                       <input
@@ -451,7 +451,7 @@ export default function Quote() {
                     <label htmlFor="logo" className="block text-sm font-medium text-gray-700 mb-1.5">
                       Logo File
                     </label>
-                    <div className={`relative border-2 border-dashed rounded-xl p-4 text-center cursor-pointer hover:border-[#DC2626] transition-colors ${
+                    <div className={`relative border-2 border-dashed rounded-xl p-4 text-center cursor-pointer hover:border-[#1E3A8A] transition-colors ${
                       form.logo ? 'border-green-400 bg-green-50' : 'border-gray-200 bg-gray-50'
                     }`}>
                       <input
@@ -475,7 +475,7 @@ export default function Quote() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="mt-8 w-full bg-[#DC2626] hover:bg-red-700 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-base py-4 px-8 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2"
+                  className="mt-8 w-full bg-[#1E3A8A] hover:bg-[#1E40AF] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-base py-4 px-8 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2"
                 >
                   {submitting ? (
                     <>
@@ -513,9 +513,9 @@ export default function Quote() {
                 <div className="space-y-4">
                   <a
                     href="tel:+919934855079"
-                    className="flex items-center gap-3 hover:text-red-400 transition-colors"
+                    className="flex items-center gap-3 hover:text-blue-400 transition-colors"
                   >
-                    <div className="w-9 h-9 bg-[#DC2626] rounded-lg flex items-center justify-center">
+                    <div className="w-9 h-9 bg-[#1E3A8A] rounded-lg flex items-center justify-center">
                       <Phone size={16} aria-hidden="true" />
                     </div>
                     <div>
@@ -550,7 +550,7 @@ export default function Quote() {
               </div>
 
               {/* Trust badge */}
-              <div className="bg-red-50 border border-red-100 rounded-2xl p-6">
+              <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={16} className="text-amber-400 fill-amber-400" aria-hidden="true" />

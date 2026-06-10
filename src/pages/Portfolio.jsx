@@ -93,8 +93,8 @@ export default function Portfolio() {
                   onClick={() => setActive(cat)}
                   className={`px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200 ${
                     active === cat
-                      ? 'bg-[#DC2626] text-white shadow-md shadow-red-200'
-                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-red-200 hover:text-[#DC2626]'
+                      ? 'bg-[#1E3A8A] text-white shadow-md shadow-blue-200'
+                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-blue-200 hover:text-[#1E3A8A]'
                   }`}
                 >
                   {cat}
@@ -106,7 +106,7 @@ export default function Portfolio() {
           {/* Project count */}
           <p className="text-sm text-gray-500 mb-8">
             Showing <strong className="text-gray-900">{filtered.length}</strong> project{filtered.length !== 1 ? 's' : ''}
-            {active !== 'All' && <> in <span className="text-[#DC2626] font-semibold">"{active}"</span></>}
+            {active !== 'All' && <> in <span className="text-[#1E3A8A] font-semibold">"{active}"</span></>}
           </p>
 
           {/* Grid */}

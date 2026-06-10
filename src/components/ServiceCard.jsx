@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function ServiceCard({ icon: Icon, name, description, color = '#DC2626', linkTo = '/services' }) {
+export default function ServiceCard({ icon: Icon, name, description, color = '#1E3A8A', linkTo = '/services' }) {
   return (
     <article className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover group">
       <div

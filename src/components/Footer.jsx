@@ -116,10 +116,10 @@ export default function Footer() {
               />
               <div className="leading-tight">
                 <span className="block font-black text-lg text-white tracking-tight">NEW CROWN</span>
-                <span className="block font-semibold text-[11px] text-[#DC2626] tracking-widest uppercase -mt-0.5">ART</span>
+                <span className="block font-semibold text-[11px] text-[#60A5FA] tracking-widest uppercase -mt-0.5">ART</span>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-gray-400 mb-5">
+            <p className="text-sm leading-relaxed text-gray-300 mb-5">
               Premium signage, advertising, and branding solutions. We help businesses build a strong visual presence with high-quality sign boards, hoardings, and printing services.
             </p>
             {/* Social icons */}
@@ -147,16 +147,16 @@ export default function Footer() {
           <div>
             <h2 className="text-white font-bold text-base mb-5 relative">
               Quick Links
-              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#DC2626]" aria-hidden="true" />
+              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#1E3A8A]" aria-hidden="true" />
             </h2>
             <ul className="space-y-2.5">
               {quickLinks.map(({ label, to }) => (
                 <li key={to}>
                   <Link
                     to={to}
-                    className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200"
+                    className="text-sm text-gray-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200"
                   >
-                    <ArrowRight size={13} aria-hidden="true" className="text-[#DC2626]" />
+                    <ArrowRight size={13} aria-hidden="true" className="text-[#60A5FA]" />
                     {label}
                   </Link>
                 </li>
@@ -168,7 +168,7 @@ export default function Footer() {
           <div>
             <h2 className="text-white font-bold text-base mb-5 relative">
               Our Services
-              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#DC2626]" aria-hidden="true" />
+              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#1E3A8A]" aria-hidden="true" />
             </h2>
             <ul className="space-y-2.5">
               {servicesList.map(({ label, image }) => (
@@ -176,9 +176,9 @@ export default function Footer() {
                   <button
                     type="button"
                     onClick={() => setActiveService({ label, image })}
-                    className="text-sm text-gray-400 hover:text-white inline-flex items-center gap-1.5 transition-all duration-200 group cursor-pointer text-left"
+                    className="text-sm text-gray-300 hover:text-white inline-flex items-center gap-1.5 transition-all duration-200 group cursor-pointer text-left"
                   >
-                    <ArrowRight size={13} aria-hidden="true" className="text-[#DC2626] group-hover:translate-x-1 transition-transform duration-200 shrink-0" />
+                    <ArrowRight size={13} aria-hidden="true" className="text-[#60A5FA] group-hover:translate-x-1 transition-transform duration-200 shrink-0" />
                     {label}
                   </button>
                 </li>
@@ -190,7 +190,7 @@ export default function Footer() {
           <div>
             <h2 className="text-white font-bold text-base mb-5 relative">
               Contact Us
-              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#DC2626]" aria-hidden="true" />
+              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#1E3A8A]" aria-hidden="true" />
             </h2>
             <ul className="space-y-4">
               <li>
@@ -200,24 +200,24 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 group cursor-pointer"
                 >
-                  <MapPin size={16} className="text-[#DC2626] group-hover:text-white mt-0.5 shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-200">
+                  <MapPin size={16} className="text-[#60A5FA] group-hover:text-white mt-0.5 shrink-0 transition-colors duration-200" />
+                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-200">
                     New Crown Art, Gaya,<br />Bihar - 823001
                   </span>
                 </a>
               </li>
               <li>
                 <a href="tel:+919934855079" className="flex items-center gap-3 group cursor-pointer">
-                  <Phone size={16} className="text-[#DC2626] group-hover:text-white shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-200">
+                  <Phone size={16} className="text-[#60A5FA] group-hover:text-white shrink-0 transition-colors duration-200" />
+                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-200">
                     +91 99348 55079
                   </span>
                 </a>
               </li>
               <li>
                 <a href="mailto:newcrown8550@gmail.com" className="flex items-center gap-3 group cursor-pointer">
-                  <Mail size={16} className="text-[#DC2626] group-hover:text-white shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-200">
+                  <Mail size={16} className="text-[#60A5FA] group-hover:text-white shrink-0 transition-colors duration-200" />
+                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-200">
                     newcrown8550@gmail.com
                   </span>
                 </a>
@@ -230,7 +230,7 @@ export default function Footer() {
                   className="flex items-center gap-3 group cursor-pointer"
                 >
                   <MessageCircle size={16} className="text-green-400 group-hover:text-green-300 shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-400 group-hover:text-green-400 transition-colors duration-200">
+                  <span className="text-sm text-gray-300 group-hover:text-green-400 transition-colors duration-200">
                     WhatsApp: +91 99348 55079
                   </span>
                 </a>
@@ -247,10 +247,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             &copy; 2025 New Crown Art. All Rights Reserved.
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             Advertising | Signage | Branding | Printing
           </p>
         </div>

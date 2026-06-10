@@ -100,7 +100,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F9FAFB]">
+      <section className="py-16" style={{ background: 'linear-gradient(160deg, #f8f7f4 0%, #eef2f7 50%, #f8f7f4 100%)' }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
@@ -122,17 +122,17 @@ export default function Contact() {
                       rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="flex items-start gap-4 group cursor-pointer"
                     >
-                      <div className="w-10 h-10 bg-[#DC2626] group-hover:bg-red-700 rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5 transition-colors duration-200 group-hover:scale-110 transform">
+                      <div className="w-10 h-10 bg-[#1E3A8A] group-hover:bg-[#1E40AF] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5 transition-colors duration-200 group-hover:scale-110 transform">
                         <Icon size={18} aria-hidden="true" />
                       </div>
                       <div>
                         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">{label}</p>
-                        <p className="text-sm text-gray-800 group-hover:text-[#DC2626] transition-colors font-medium">{value}</p>
+                        <p className="text-sm text-gray-800 group-hover:text-[#1E3A8A] transition-colors font-medium">{value}</p>
                       </div>
                     </a>
                   ) : (
                     <div key={label} className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#DC2626] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5">
+                      <div className="w-10 h-10 bg-[#1E3A8A] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5">
                         <Icon size={18} aria-hidden="true" />
                       </div>
                       <div>
@@ -155,13 +155,13 @@ export default function Contact() {
                   loading="lazy"
                   title="New Crown Art Location — Gaya, Bihar"
                 />
-                <div className="bg-white px-4 py-3 flex items-center gap-2">
-                  <MapPin size={15} className="text-[#DC2626] shrink-0" aria-hidden="true" />
+                <div className="bg-white px-4 py-3 flex items-center gap-2 border-t border-gray-100">
+                  <MapPin size={15} className="text-[#1E3A8A] shrink-0" aria-hidden="true" />
                   <a
                     href="https://www.google.com/maps/place/New+Crown+Art/@24.7950271,85.007296,20z/data=!4m10!1m2!2m1!1snew+crown+art+gaya+bihar!3m6!1s0x39f32b000d6c2be1:0x2025f26c80d807da!8m2!3d24.7947613!4d85.0075443!15sChhuZXcgY3Jvd24gYXJ0IGdheWEgYmloYXKSARJhZHZlcnRpc2luZ19hZ2VuY3ngAQA!16s%2Fg%2F11z8n5my8s"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#DC2626] font-semibold hover:underline"
+                    className="text-sm text-[#1E3A8A] font-semibold hover:underline"
                   >
                     View New Crown Art on Google Maps →
                   </a>
@@ -191,7 +191,7 @@ export default function Contact() {
                   <button
                     type="button"
                     onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', email: '', subject: '', message: '' }) }}
-                    className="mt-3 text-sm text-[#DC2626] hover:text-red-700 font-semibold transition-colors block"
+                    className="mt-3 text-sm text-[#1E3A8A] hover:text-[#1E40AF] font-semibold transition-colors"
                   >
                     Send another message
                   </button>
@@ -208,7 +208,7 @@ export default function Contact() {
                     {/* Name */}
                     <div>
                       <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1.5">
-                        Name <span className="text-[#DC2626]" aria-label="required">*</span>
+                        Name <span className="text-[#1E3A8A]" aria-label="required">*</span>
                       </label>
                       <input
                         id="contact-name"
@@ -220,7 +220,7 @@ export default function Contact() {
                         aria-required="true"
                         aria-invalid={!!errors.name}
                         placeholder="Your full name"
-                        className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] ${
+                        className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
                           errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
                         }`}
                       />
@@ -231,7 +231,7 @@ export default function Contact() {
                       {/* Phone */}
                       <div>
                         <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-700 mb-1.5">
-                          Phone <span className="text-[#DC2626]" aria-label="required">*</span>
+                          Phone <span className="text-[#1E3A8A]" aria-label="required">*</span>
                         </label>
                         <input
                           id="contact-phone"
@@ -243,7 +243,7 @@ export default function Contact() {
                           aria-required="true"
                           aria-invalid={!!errors.phone}
                           placeholder="+91 99348 55079"
-                          className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] ${
+                          className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
                             errors.phone ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
                           }`}
                         />
@@ -262,7 +262,7 @@ export default function Contact() {
                           value={form.email}
                           onChange={handleChange}
                           placeholder="email@example.com"
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                         />
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export default function Contact() {
                         name="subject"
                         value={form.subject}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626]"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                       >
                         <option value="">Select subject...</option>
                         {subjectOptions.map((s) => (
@@ -289,7 +289,7 @@ export default function Contact() {
                     {/* Message */}
                     <div>
                       <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1.5">
-                        Message <span className="text-[#DC2626]" aria-label="required">*</span>
+                        Message <span className="text-[#1E3A8A]" aria-label="required">*</span>
                       </label>
                       <textarea
                         id="contact-message"
@@ -301,7 +301,7 @@ export default function Contact() {
                         aria-invalid={!!errors.message}
                         rows={5}
                         placeholder="Tell us about your inquiry, project details, or any questions you have..."
-                        className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#DC2626]/30 focus:border-[#DC2626] resize-none ${
+                        className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] resize-none ${
                           errors.message ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
                         }`}
                       />
@@ -311,7 +311,8 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full bg-[#DC2626] hover:bg-red-700 disabled:opacity-70 text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2"
+                      className="w-full disabled:opacity-70 font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2 text-[#111827] shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                      style={{ background: 'linear-gradient(135deg, #FFD700 0%, #C9A84C 50%, #A07832 100%)' }}
                     >
                       {submitting ? (
                         <>
