@@ -345,29 +345,16 @@ export default function Home() {
 
       {/* ---- WHY CHOOSE US — DARK SECTION ---- */}
       <section
-        className="py-20 relative overflow-hidden"
+        className="py-20 relative overflow-hidden bg-mesh-dark"
         aria-labelledby="why-heading"
-        style={{ background: 'linear-gradient(135deg, #06060f 0%, #060c1a 50%, #06060f 100%)' }}
       >
-        {/* Signage mosaic background */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="grid grid-cols-6 h-full opacity-[0.18]">
-            {[
-              'https://5.imimg.com/data5/SELLER/Default/2026/3/593347818/YE/PW/YL/45293610/acp-sign-board-500x500.jpg',
-              'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
-              'https://5.imimg.com/data5/OF/FY/BU/SELLER-3380324/glow-sign-board-1000x1000.jpg',
-              'https://5.imimg.com/data5/KV/MU/OD/SELLER-14631917/3d-golden-letter-signage-board-1000x1000.jpg',
-              'https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg',
-              'https://4.imimg.com/data4/YM/JM/MY-12149095/led-sign-board-1000x1000.jpg',
-            ].map((src, i) => (
-              <div key={i} style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100%' }} />
-            ))}
-          </div>
-          <div className="absolute inset-0" style={{ background: 'rgba(6,6,15,0.80)' }} />
-        </div>
-        <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'radial-gradient(circle at 30% 50%, rgba(30,58,138,0.15) 0%, transparent 60%)',
-        }} aria-hidden="true" />
+        {/* Dot grid overlay */}
+        <div className="absolute inset-0 bg-dot-pattern opacity-40 pointer-events-none" aria-hidden="true" />
+        {/* Animated glow orbs */}
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full pointer-events-none orb-animate" aria-hidden="true"
+          style={{ background: 'radial-gradient(circle, rgba(30,58,138,0.20) 0%, transparent 70%)' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full pointer-events-none orb-animate" aria-hidden="true"
+          style={{ background: 'radial-gradient(circle, rgba(201,168,76,0.10) 0%, transparent 70%)', animationDelay: '3s' }} />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-14">
@@ -384,16 +371,17 @@ export default function Home() {
             {whyChooseUs.map(({ icon: Icon, title, desc, color }, i) => (
               <div
                 key={title}
-                className="rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group animate-fade-in-up"
+                className="rounded-2xl p-6 transition-all duration-300 group animate-fade-in-up glow-border"
                 style={{
-                  background: 'rgba(255,255,255,0.04)',
-                  backdropFilter: 'blur(10px)',
+                  background: 'rgba(255,255,255,0.05)',
+                  backdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255,255,255,0.08)',
                   animationDelay: `${i * 0.08}s`,
                 }}
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
-                  style={{ background: `${color}20`, border: `1px solid ${color}40` }}
+                  style={{ background: `${color}25`, border: `1px solid ${color}50` }}
                   aria-hidden="true"
                 >
                   <Icon size={22} style={{ color }} />
@@ -410,7 +398,8 @@ export default function Home() {
       <StatsBar />
 
       {/* ---- HOW IT WORKS ---- */}
-      <section className="py-20 bg-[#F9FAFB]" aria-labelledby="process-heading">
+      <section className="py-20 bg-mesh-light relative overflow-hidden" aria-labelledby="process-heading">
+        <div className="absolute inset-0 bg-dot-pattern opacity-30 pointer-events-none" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-[#1E3A8A] font-bold text-xs uppercase tracking-widest">Our Process</span>

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import FloatingWhatsApp from './components/FloatingWhatsApp'
+import FloatingQuoteWidget from './components/FloatingQuoteWidget'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Services from './pages/Services'
@@ -29,7 +29,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <FloatingWhatsApp />
+        <FloatingQuoteWidget />
       </div>
     </BrowserRouter>
   )
