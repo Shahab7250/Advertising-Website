@@ -234,24 +234,26 @@ export default function Services() {
                     loading="lazy"
                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute top-3 left-3 w-9 h-9 rounded-lg flex items-center justify-center text-white" style={{ backgroundColor: service.color }}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  {/* Service icon top left */}
+                  <div className="absolute top-3 left-3 w-9 h-9 rounded-lg flex items-center justify-center text-white shadow-lg" style={{ backgroundColor: service.color }}>
                     <service.icon size={18} />
                   </div>
+                  {/* WhatsApp green bar at bottom of image */}
+                  <a
+                    href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-0 left-0 right-0 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-bold px-4 py-2.5 transition-colors justify-center"
+                  >
+                    <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-5 h-5 object-contain rounded-sm" />
+                    Get Inquiry on WhatsApp
+                  </a>
                 </div>
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-bold text-gray-900 text-base mb-2">{service.name}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed flex-1">{service.description}</p>
-                  <a
-                    href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 bg-green-500/70 hover:bg-green-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors w-full justify-center"
-                  >
-                    <MessageCircle size={16} />
-                    Get Inquiry on WhatsApp
-                  </a>
                 </div>
               </article>
             ))}
