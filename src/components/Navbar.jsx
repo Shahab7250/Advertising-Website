@@ -58,9 +58,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group" aria-label="New Crown Art — Home">
           <img
-            src="/logo.svg"
+            src="/logo.png"
             alt="New Crown Art Logo"
-            className="h-12 w-12 rounded-full object-cover shadow-sm ring-2 ring-gray-200 group-hover:ring-[#C9A84C] transition-all duration-200"
+            className="h-14 w-14 rounded-full object-cover shadow-sm ring-2 ring-[#C9A84C] group-hover:ring-[#1E3A8A] transition-all duration-200 flex-shrink-0"
           />
           <div className="leading-tight">
             <span className="block font-black text-lg text-[#111827] tracking-tight">
