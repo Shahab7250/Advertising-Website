@@ -37,7 +37,7 @@ export default function FloatingQuoteWidget() {
           className={`transition-all duration-300 origin-right ${
             open ? 'opacity-100 scale-x-100 translate-x-0' : 'opacity-0 scale-x-0 translate-x-4 pointer-events-none'
           }`}
-          style={{ width: 280 }}
+          style={{ width: 'min(280px, calc(100vw - 60px))' }}
         >
           <div className="bg-white rounded-l-2xl shadow-2xl border border-gray-100 overflow-hidden">
             {/* Header */}

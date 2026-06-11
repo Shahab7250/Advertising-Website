@@ -240,9 +240,12 @@ body {
   box-shadow: 0 0 0 1px rgba(201,168,76,0.5), 0 8px 40px rgba(30,58,138,0.20), 0 0 20px rgba(201,168,76,0.08);
 }
 
-/* Mobile bottom bar spacing */
-@media (max-width: 640px) {
+/* Mobile bottom bar spacing — prevent content hidden behind sticky bar */
+@media (max-width: 639px) {
   main {
-    padding-bottom: 56px;
+    padding-bottom: 60px;
+  }
+  footer {
+    padding-bottom: 60px;
   }
 }

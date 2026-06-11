@@ -156,7 +156,7 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="max-w-7xl mx-auto px-4 py-28 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-4 py-20 sm:py-28 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
 
             {/* Left: hero text — 3/5 width */}
@@ -457,7 +457,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map(({ name, location, category, image }, i) => (
               <article
                 key={name}
@@ -509,7 +509,7 @@ export default function Home() {
             <p className="text-gray-400 max-w-md mx-auto text-sm">Real feedback from businesses we've helped across India.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map(({ text, name, avatarGradient, accentColor }, i) => (
               <div
                 key={name}
