@@ -167,6 +167,11 @@ body {
   border-radius: 3px;
 }
 
+/* Force dark text in all form inputs — overrides body color */
+input, textarea, select {
+  color: #111827 !important;
+}
+
 /* Focus ring */
 *:focus-visible {
   outline: 2px solid #1E3A8A;

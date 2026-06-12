@@ -147,7 +147,7 @@ export default function Contact() {
               {/* Map */}
               <div className="mt-6 rounded-xl overflow-hidden shadow-sm border border-gray-200">
                 <iframe
-                  src="https://maps.google.com/maps?q=New+Crown+Art,+Gaya,+Bihar&output=embed&z=17"
+                  src="https://maps.google.com/maps?q=24.7947613,85.0075443&z=18&output=embed"
                   width="100%"
                   height="220"
                   style={{ border: 0, display: 'block' }}
@@ -221,7 +221,7 @@ export default function Contact() {
                         aria-invalid={!!errors.name}
                         placeholder="Your full name"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
-                          errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
+                          errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white text-gray-900'
                         }`}
                       />
                       {errors.name && <p className="text-xs text-red-600 mt-1" role="alert">{errors.name}</p>}
@@ -243,7 +243,7 @@ export default function Contact() {
                           aria-required="true"
                           aria-invalid={!!errors.phone}
                           placeholder="+91 99348 55079"
-                          className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
+                          className={`w-full px-4 py-3 rounded-xl border text-sm text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] ${
                             errors.phone ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
                           }`}
                         />
@@ -262,7 +262,7 @@ export default function Contact() {
                           value={form.email}
                           onChange={handleChange}
                           placeholder="email@example.com"
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                         />
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export default function Contact() {
                         name="subject"
                         value={form.subject}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-sm text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A]"
                       >
                         <option value="">Select subject...</option>
                         {subjectOptions.map((s) => (
@@ -302,7 +302,7 @@ export default function Contact() {
                         rows={5}
                         placeholder="Tell us about your inquiry, project details, or any questions you have..."
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/30 focus:border-[#1E3A8A] resize-none ${
-                          errors.message ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white'
+                          errors.message ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50 focus:bg-white text-gray-900'
                         }`}
                       />
                       {errors.message && <p className="text-xs text-red-600 mt-1" role="alert">{errors.message}</p>}

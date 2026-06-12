@@ -279,16 +279,16 @@ export default function Services() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {filtered.map((service, i) => (
               <article
                 key={service.name}
                 id={toSlug(service.name)}
                 className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:-translate-y-1 flex flex-col animate-fade-in-up"
-                style={{ animationDelay: `${(i % 6) * 0.07}s` }}
+                style={{ animationDelay: `${(i % 4) * 0.07}s` }}
               >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden bg-gray-100">
+                {/* Image — tall for full clarity */}
+                <div className="relative h-64 overflow-hidden bg-gray-100">
                   <img
                     src={service.image}
                     alt={service.name}
@@ -296,7 +296,7 @@ export default function Services() {
                     loading="lazy"
                     onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   {/* Icon badge */}
                   <div className="absolute top-3 left-3 w-9 h-9 rounded-lg flex items-center justify-center text-white shadow-lg" style={{ backgroundColor: service.color }}>
                     <service.icon size={18} />
@@ -305,21 +305,21 @@ export default function Services() {
                   <div className="absolute top-3 right-3 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-full backdrop-blur-sm">
                     {service.category}
                   </div>
-                  {/* WhatsApp green bar */}
+                  {/* WhatsApp icon only — bottom right */}
                   <a
                     href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute bottom-0 left-0 right-0 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-bold px-4 py-2.5 transition-colors justify-center"
+                    aria-label={`WhatsApp inquiry for ${service.name}`}
+                    className="absolute bottom-3 right-3 w-11 h-11 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
                   >
-                    <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-5 h-5 object-contain rounded-sm" />
-                    Get Inquiry on WhatsApp
+                    <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-6 h-6 object-contain" />
                   </a>
                 </div>
-                {/* Content */}
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="font-bold text-gray-900 text-base mb-2">{service.name}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
+                {/* Content — compact */}
+                <div className="px-4 py-3 flex flex-col flex-1">
+                  <h3 className="font-bold text-gray-900 text-sm mb-1">{service.name}</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">{service.description}</p>
                 </div>
               </article>
             ))}
