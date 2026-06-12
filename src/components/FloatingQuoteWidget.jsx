@@ -140,7 +140,7 @@ export default function FloatingQuoteWidget() {
         <a
           href="tel:+919934855079"
           aria-label="Call us"
-          className="w-11 h-11 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white rounded-l-xl flex items-center justify-center shadow-lg transition-all duration-200 hover:w-12"
+          className="w-11 h-11 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-l-xl flex items-center justify-center shadow-lg transition-all duration-200 hover:w-12"
         >
           <Phone size={18} />
         </a>
@@ -150,7 +150,7 @@ export default function FloatingQuoteWidget() {
       <div className="fixed bottom-0 left-0 right-0 sm:hidden z-40 flex" style={{ boxShadow: '0 -2px 16px rgba(0,0,0,0.15)' }}>
         <a
           href="tel:+919934855079"
-          className="flex-1 flex items-center justify-center gap-1.5 bg-[#1E3A8A] text-white py-3.5 font-bold text-sm"
+          className="flex-1 flex items-center justify-center gap-1.5 bg-[#0D9488] text-white py-3.5 font-bold text-sm"
         >
           <Phone size={16} /> Call Now
         </a>

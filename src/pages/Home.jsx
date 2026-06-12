@@ -210,7 +210,7 @@ export default function Home() {
                   { val: '2000+', lbl: 'Projects Done' },
                   { val: '10,000+', lbl: 'Happy Clients' },
                   { val: '10+', lbl: 'Years Experience' },
-                  { val: '21', lbl: 'Services' },
+                  { val: '21+', lbl: 'Services' },
                 ].map(({ val, lbl }) => (
                   <div key={lbl}>
                     <p className="text-2xl font-black gold-shimmer">{val}</p>
@@ -274,7 +274,7 @@ export default function Home() {
       {/* ---- MARQUEE TICKER ---- */}
       <div
         className="py-4 overflow-hidden"
-        style={{ background: 'linear-gradient(90deg, #1E3A8A 0%, #1E40AF 50%, #1E3A8A 100%)' }}
+        style={{ background: 'linear-gradient(90deg, #0D9488 0%, #14B8A6 50%, #0D9488 100%)' }}
         aria-hidden="true"
       >
         <div className="flex gap-8 whitespace-nowrap" style={{ animation: 'marquee 30s linear infinite' }}>
@@ -299,9 +299,9 @@ export default function Home() {
             </div>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 text-[#1E3A8A] font-bold text-sm hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-[#0D9488] font-bold text-sm hover:gap-3 transition-all"
             >
-              View All 21 Services <ArrowRight size={16} />
+              View All 21+ Services <ArrowRight size={16} />
             </Link>
           </div>
 
@@ -309,10 +309,10 @@ export default function Home() {
             {services.map(({ icon: Icon, name, description, image, color }, i) => (
               <article
                 key={name}
-                className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white animate-fade-in-up"
+                className="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <img
                     src={image}
                     alt={name}
@@ -320,11 +320,22 @@ export default function Home() {
                     loading="lazy"
                     onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  {/* Gradient overlay — stronger at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  {/* Icon badge top-left */}
                   <div className="absolute top-3 left-3 w-9 h-9 rounded-xl flex items-center justify-center text-white shadow-lg" style={{ backgroundColor: color }}>
                     <Icon size={17} />
                   </div>
-                  {/* WhatsApp icon on image */}
+                  {/* Service name + location at bottom-left */}
+                  <div className="absolute bottom-12 left-4 right-14">
+                    <h3 className="text-white font-black text-sm leading-tight drop-shadow-md">{name}</h3>
+                    <p className="text-gray-300 text-xs mt-0.5">Gaya, Bihar</p>
+                  </div>
+                  {/* Description at very bottom */}
+                  <div className="absolute bottom-3 left-4 right-14">
+                    <p className="text-gray-300 text-[10px] leading-snug line-clamp-1 opacity-75">{description}</p>
+                  </div>
+                  {/* WhatsApp icon — bottom right */}
                   <a
                     href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20inquiry%20for%20${encodeURIComponent(name)}`}
                     target="_blank"
@@ -334,10 +345,6 @@ export default function Home() {
                   >
                     <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-5 h-5 object-contain" />
                   </a>
-                </div>
-                <div className="px-4 py-2.5">
-                  <h3 className="font-bold text-gray-900 text-sm mb-1">{name}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">{description}</p>
                 </div>
               </article>
             ))}
@@ -432,7 +439,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               to="/quote"
-              className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               Start Your Project Today
               <ArrowRight size={18} aria-hidden="true" />

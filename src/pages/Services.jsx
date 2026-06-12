@@ -180,19 +180,27 @@ const services = [
 
 const filters = [
   'All',
-  'ACP Boards',
-  'Glow Signs',
-  'LED Boards',
-  'Steel Letters',
+  'ACP Sign Boards',
+  'Glow Sign Boards',
+  'LED Sign Boards',
+  'Shop Sign Boards',
+  'Stainless Steel Letters',
   'Acrylic Letters',
-  'Flex Printing',
-  'Shop Branding',
+  '3D Letter Signage',
+  'Flex Banner Printing',
   'Hoardings',
-  'Vehicle Branding',
-  'Indoor Signage',
+  'Vinyl Printing',
+  'One Way Vision Printing',
+  'Visiting Cards',
+  'Brochures',
+  'Flyers',
+  'Posters',
+  'Shop Branding',
   'Office Branding',
-  'Print Media',
-  'Graphic Design',
+  'Vehicle Branding',
+  'Outdoor Advertising',
+  'Indoor Signage',
+  'Graphic Design Services',
 ]
 
 const toSlug = (name) => name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
@@ -213,7 +221,7 @@ export default function Services() {
 
   const filtered = activeFilter === 'All'
     ? services
-    : services.filter((s) => s.category === activeFilter)
+    : services.filter((s) => s.name === activeFilter)
 
   return (
     <>
@@ -254,7 +262,7 @@ export default function Services() {
           <div className="text-center mb-8">
             <span className="inline-block w-12 h-1 bg-[#1E3A8A] rounded mb-4" aria-hidden="true" />
             <h2 id="services-grid-heading" className="text-3xl font-black text-gray-900">
-              {filtered.length} Specialised Services
+              21+ Specialised Services
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               Everything your business needs for visual branding, advertising, and signage — all under one roof.
@@ -269,8 +277,8 @@ export default function Services() {
                 onClick={() => setActiveFilter(f)}
                 className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
                   activeFilter === f
-                    ? 'bg-[#1E3A8A] text-white border-[#1E3A8A] shadow-md'
-                    : 'bg-white text-gray-700 border-gray-200 hover:border-[#1E3A8A] hover:text-[#1E3A8A]'
+                    ? 'bg-[#0D9488] text-white border-[#0D9488] shadow-md'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-[#0D9488] hover:text-[#0D9488]'
                 }`}
               >
                 {f}
@@ -284,11 +292,11 @@ export default function Services() {
               <article
                 key={service.name}
                 id={toSlug(service.name)}
-                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:-translate-y-1 flex flex-col animate-fade-in-up"
+                className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${(i % 4) * 0.07}s` }}
               >
-                {/* Image — tall for full clarity */}
-                <div className="relative h-64 overflow-hidden bg-gray-100">
+                {/* Full-height image with text overlay */}
+                <div className="relative h-72 overflow-hidden bg-gray-100">
                   <img
                     src={service.image}
                     alt={service.name}
@@ -296,16 +304,22 @@ export default function Services() {
                     loading="lazy"
                     onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  {/* Icon badge */}
+                  {/* Gradient overlay — stronger at bottom for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  {/* Icon badge top-left */}
                   <div className="absolute top-3 left-3 w-9 h-9 rounded-lg flex items-center justify-center text-white shadow-lg" style={{ backgroundColor: service.color }}>
                     <service.icon size={18} />
                   </div>
-                  {/* Category badge */}
+                  {/* Category badge top-right */}
                   <div className="absolute top-3 right-3 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-full backdrop-blur-sm">
                     {service.category}
                   </div>
-                  {/* WhatsApp icon only — bottom right */}
+                  {/* Service name + location at bottom-left */}
+                  <div className="absolute bottom-12 left-4 right-16">
+                    <h3 className="text-white font-black text-base leading-tight drop-shadow-md">{service.name}</h3>
+                    <p className="text-gray-300 text-xs mt-0.5">Gaya, Bihar</p>
+                  </div>
+                  {/* WhatsApp icon — bottom right */}
                   <a
                     href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
                     target="_blank"
@@ -315,11 +329,10 @@ export default function Services() {
                   >
                     <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-6 h-6 object-contain" />
                   </a>
-                </div>
-                {/* Content — compact */}
-                <div className="px-4 py-3 flex flex-col flex-1">
-                  <h3 className="font-bold text-gray-900 text-sm mb-1">{service.name}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">{service.description}</p>
+                  {/* Description at bottom */}
+                  <div className="absolute bottom-3 left-4 right-16">
+                    <p className="text-gray-300 text-[11px] leading-snug line-clamp-1 opacity-80">{service.description}</p>
+                  </div>
                 </div>
               </article>
             ))}
@@ -341,7 +354,7 @@ export default function Services() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             Contact Us
             <ChevronRight size={18} aria-hidden="true" />

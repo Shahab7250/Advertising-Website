@@ -95,7 +95,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             to="/quote"
-            className="hidden sm:inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+            className="hidden sm:inline-flex items-center gap-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
           >
             Get Free Quote
           </Link>
@@ -140,7 +140,7 @@ export default function Navbar() {
             <li className="mt-2">
               <Link
                 to="/quote"
-                className="block text-center bg-[#1E3A8A] hover:bg-[#1E40AF] text-white text-sm font-semibold px-4 py-3 rounded-lg transition-colors"
+                className="block text-center bg-[#0D9488] hover:bg-[#0F766E] text-white text-sm font-semibold px-4 py-3 rounded-lg transition-colors"
               >
                 Get Free Quote
               </Link>

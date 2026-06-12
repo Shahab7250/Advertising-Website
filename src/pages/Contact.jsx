@@ -141,17 +141,17 @@ export default function Contact() {
                       rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="flex items-start gap-4 group cursor-pointer"
                     >
-                      <div className="w-10 h-10 bg-[#1E3A8A] group-hover:bg-[#1E40AF] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5 transition-colors duration-200 group-hover:scale-110 transform">
+                      <div className="w-10 h-10 bg-[#0D9488] group-hover:bg-[#0F766E] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5 transition-colors duration-200 group-hover:scale-110 transform">
                         <Icon size={18} aria-hidden="true" />
                       </div>
                       <div>
                         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">{label}</p>
-                        <p className="text-sm text-gray-800 group-hover:text-[#1E3A8A] transition-colors font-medium">{value}</p>
+                        <p className="text-sm text-gray-800 group-hover:text-[#0D9488] transition-colors font-medium">{value}</p>
                       </div>
                     </a>
                   ) : (
                     <div key={label} className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#1E3A8A] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5">
+                      <div className="w-10 h-10 bg-[#0D9488] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5">
                         <Icon size={18} aria-hidden="true" />
                       </div>
                       <div>
@@ -178,14 +178,14 @@ export default function Contact() {
                   href="https://www.google.com/maps/place/New+Crown+Art/@24.7950271,85.007296,20z/data=!4m10!1m2!2m1!1snew+crown+art+gaya+bihar!3m6!1s0x39f32b000d6c2be1:0x2025f26c80d807da!8m2!3d24.7947613!4d85.0075443!15sChhuZXcgY3Jvd24gYXJ0IGdheWEgYmloYXKSARJhZHZlcnRpc2luZ19hZ2VuY3ngAQA!16s%2Fg%2F11z8n5my8s"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-[#1E3A8A] hover:bg-[#1E40AF] transition-colors px-4 py-3 group"
+                  className="flex items-center gap-3 bg-[#0D9488] hover:bg-[#0F766E] transition-colors px-4 py-3 group"
                 >
                   <div className="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
                     <MapPin size={16} className="text-white" aria-hidden="true" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-base font-black text-white leading-tight">New Crown Art</p>
-                    <p className="text-xs text-blue-200 mt-0.5">T. Model School Road, Gaya, Bihar · Tap to open in Maps →</p>
+                    <p className="text-xs text-teal-100 mt-0.5">T. Model School Road, Gaya, Bihar · Tap to open in Maps →</p>
                   </div>
                 </a>
               </div>

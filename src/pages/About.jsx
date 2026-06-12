@@ -30,8 +30,9 @@ const workshopHighlights = [
     icon: Wrench,
     title: 'In-House Manufacturing',
     desc: 'Every sign board, flex banner, and acrylic letter is crafted right here in our Gaya workshop — full quality control from raw material to finished product.',
-    color: '#1E3A8A',
-    gradient: 'from-blue-50 to-white',
+    color: '#0D9488',
+    gradient: 'from-teal-50 to-white',
+    link: null,
   },
   {
     icon: MapPin,
@@ -39,6 +40,7 @@ const workshopHighlights = [
     desc: 'Visit our workshop at Gaya, Bihar anytime. See materials, discuss your project face-to-face, and get an instant quote — no appointment needed.',
     color: '#059669',
     gradient: 'from-green-50 to-white',
+    link: 'https://www.google.com/maps?q=24.7947613,85.0075443',
   },
   {
     icon: Zap,
@@ -46,6 +48,7 @@ const workshopHighlights = [
     desc: 'Local production means faster delivery. Most projects are completed within 3–7 working days with same-day emergency services available on request.',
     color: '#D97706',
     gradient: 'from-amber-50 to-white',
+    link: null,
   },
 ]
 
@@ -152,7 +155,7 @@ export default function About() {
 
               <Link
                 to="/quote"
-                className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white font-bold px-7 py-3.5 rounded-xl transition-all mt-8 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-bold px-7 py-3.5 rounded-xl transition-all mt-8 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
                 Start a Project
                 <ArrowRight size={18} aria-hidden="true" />
@@ -162,10 +165,10 @@ export default function About() {
             {/* Image grid */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Neon Sign Boards', src: 'https://images.pexels.com/photos/33867853/pexels-photo-33867853/free-photo-of-vibrant-tokyo-nightlife-with-neon-signs.jpeg?auto=compress&cs=tinysrgb&w=600' },
-                { label: 'Street Advertising', src: 'https://images.pexels.com/photos/32459951/pexels-photo-32459951/free-photo-of-vibrant-billboards-in-bustling-urban-street.jpeg?auto=compress&cs=tinysrgb&w=600' },
-                { label: 'Billboard Hoardings', src: 'https://images.pexels.com/photos/33644177/pexels-photo-33644177/free-photo-of-advertising-billboards-in-lagos-cityscape.jpeg?auto=compress&cs=tinysrgb&w=600' },
-                { label: 'Outdoor Advertising', src: 'https://images.pexels.com/photos/4913828/pexels-photo-4913828.jpeg?auto=compress&cs=tinysrgb&w=600' },
+                { label: 'ACP Sign Boards', src: '/about/acp-board.jpg' },
+                { label: 'Glow Sign Boards', src: '/about/glow-sign.jpg' },
+                { label: '3D Letter Signage', src: '/about/3d-signage.jpg' },
+                { label: 'Shop Branding', src: '/about/shop-branding.jpg' },
               ].map(({ label, src }) => (
                 <div key={label} className="rounded-2xl overflow-hidden h-52 relative group">
                   <img
@@ -175,9 +178,9 @@ export default function About() {
                     loading="lazy"
                     onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white text-xs font-bold bg-[#1E3A8A] px-2.5 py-1 rounded-full">{label}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-3 left-3">
+                    <span className="text-white text-xs font-bold bg-[#0D9488] px-2.5 py-1 rounded-full">{label}</span>
                   </div>
                 </div>
               ))}
@@ -262,21 +265,21 @@ export default function About() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#1E3A8A]/8 to-white rounded-2xl p-8 shadow-sm border-2 border-[#1E3A8A]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]" />
-              <div className="w-14 h-14 bg-gradient-to-br from-[#1E3A8A]/20 to-[#3B82F6]/15 rounded-2xl flex items-center justify-center mb-6 shadow-md border border-[#1E3A8A]/20 group-hover:scale-110 transition-transform duration-300">
-                <Target size={28} className="text-[#1E3A8A]" aria-hidden="true" />
+            <div className="bg-gradient-to-br from-[#0D9488]/12 to-white rounded-2xl p-8 shadow-sm border-2 border-[#0D9488]/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-[#0D9488] to-[#14B8A6]" />
+              <div className="w-14 h-14 bg-[#0D9488] rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+                <Target size={28} className="text-white" aria-hidden="true" />
               </div>
-              <span className="inline-block bg-[#1E3A8A] text-white text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wider uppercase">Mission</span>
+              <span className="inline-block bg-[#0D9488] text-white text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wider uppercase">Mission</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
                 To help businesses increase their visibility and brand recognition through high-quality signage, printing, and branding solutions. We strive to be the most reliable and creative advertising partner for every client.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-[#C9A84C]/8 to-white rounded-2xl p-8 shadow-sm border-2 border-[#C9A84C]/25 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div className="bg-gradient-to-br from-[#C9A84C]/12 to-white rounded-2xl p-8 shadow-sm border-2 border-[#C9A84C]/35 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-[#C9A84C] to-[#FFD700]" />
-              <div className="w-14 h-14 bg-gradient-to-br from-[#C9A84C]/20 to-[#FFD700]/15 rounded-2xl flex items-center justify-center mb-6 shadow-md border border-[#C9A84C]/25 group-hover:scale-110 transition-transform duration-300">
-                <Eye size={28} className="text-[#C9A84C]" aria-hidden="true" />
+              <div className="w-14 h-14 bg-gradient-to-br from-[#C9A84C] to-[#A07832] rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+                <Eye size={28} className="text-white" aria-hidden="true" />
               </div>
               <span className="inline-block bg-gradient-to-r from-[#C9A84C] to-[#A07832] text-white text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wider uppercase">Vision</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Vision</h3>
@@ -312,7 +315,7 @@ export default function About() {
                 >
                   <Icon size={22} style={{ color }} />
                 </div>
-                <span className="inline-block text-xs font-bold px-2.5 py-1 rounded-full mb-3" style={{ backgroundColor: `${color}12`, color }}>
+                <span className="inline-block text-xs font-bold px-2.5 py-1 rounded-full mb-3 text-white" style={{ backgroundColor: color }}>
                   {label}
                 </span>
                 <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
@@ -335,22 +338,47 @@ export default function About() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
-            {workshopHighlights.map(({ icon: Icon, title, desc, color, gradient }, i) => (
+            {workshopHighlights.map(({ icon: Icon, title, desc, color, gradient, link }, i) => (
               <div
                 key={title}
                 className={`bg-gradient-to-br ${gradient} rounded-2xl p-7 shadow-sm border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group animate-fade-in-up`}
                 style={{ borderColor: `${color}30`, animationDelay: `${i * 0.1}s` }}
               >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md"
-                  style={{ backgroundColor: `${color}18`, border: `1.5px solid ${color}35` }}
-                  aria-hidden="true"
-                >
-                  <Icon size={26} style={{ color }} />
-                </div>
+                {link ? (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open location in Google Maps"
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md cursor-pointer hover:opacity-90"
+                    style={{ backgroundColor: color, border: `1.5px solid ${color}` }}
+                  >
+                    <Icon size={26} className="text-white" />
+                  </a>
+                ) : (
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md"
+                    style={{ backgroundColor: color }}
+                    aria-hidden="true"
+                  >
+                    <Icon size={26} className="text-white" />
+                  </div>
+                )}
                 <div className="w-8 h-1 rounded-full mb-4" style={{ backgroundColor: color }} />
                 <h3 className="font-black text-gray-900 text-lg mb-3">{title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
+                {link && (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold mt-3 hover:underline"
+                    style={{ color }}
+                  >
+                    <MapPin size={13} />
+                    View on Google Maps
+                  </a>
+                )}
               </div>
             ))}
           </div>

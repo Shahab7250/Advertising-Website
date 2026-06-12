@@ -133,7 +133,7 @@ export default function Quote() {
           <div className="flex flex-wrap gap-3 justify-center mt-4">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 bg-[#1E3A8A] text-white font-bold px-6 py-3 rounded-xl hover:bg-[#1E40AF] transition-colors"
+              className="inline-flex items-center gap-2 bg-[#0D9488] text-white font-bold px-6 py-3 rounded-xl hover:bg-[#0F766E] transition-colors"
             >
               Back to Home
             </Link>
@@ -475,7 +475,7 @@ export default function Quote() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="mt-8 w-full bg-[#1E3A8A] hover:bg-[#1E40AF] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-base py-4 px-8 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2"
+                  className="mt-8 w-full bg-[#0D9488] hover:bg-[#0F766E] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-base py-4 px-8 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2"
                 >
                   {submitting ? (
                     <>
@@ -515,7 +515,7 @@ export default function Quote() {
                     href="tel:+919934855079"
                     className="flex items-center gap-3 hover:text-blue-400 transition-colors"
                   >
-                    <div className="w-9 h-9 bg-[#1E3A8A] rounded-lg flex items-center justify-center">
+                    <div className="w-9 h-9 bg-[#0D9488] rounded-lg flex items-center justify-center">
                       <Phone size={16} aria-hidden="true" />
                     </div>
                     <div>
