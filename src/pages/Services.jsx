@@ -321,7 +321,7 @@ export default function Services() {
                   </div>
                   {/* WhatsApp icon — bottom right */}
                   <a
-                    href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
+                    href={`https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`WhatsApp inquiry for ${service.name}`}

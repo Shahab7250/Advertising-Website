@@ -189,7 +189,7 @@ export default function Home() {
                   <ArrowRight size={18} aria-hidden="true" />
                 </Link>
                 <a
-                  href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
+                  href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-0.5 text-base"
@@ -299,12 +299,12 @@ export default function Home() {
                 Our Core Services
               </h2>
             </div>
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-2 text-[#0D9488] font-bold text-sm hover:gap-3 transition-all"
+            <button
+              onClick={() => navigate('/services')}
+              className="inline-flex items-center gap-2 text-[#0D9488] font-bold text-sm hover:gap-3 transition-all cursor-pointer"
             >
               View All 21+ Services <ArrowRight size={16} />
-            </Link>
+            </button>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -340,7 +340,7 @@ export default function Home() {
                   </div>
                   {/* WhatsApp icon — bottom right */}
                   <a
-                    href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20inquiry%20for%20${encodeURIComponent(name)}`}
+                    href={`https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20need%20inquiry%20for%20${encodeURIComponent(name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`WhatsApp inquiry for ${name}`}

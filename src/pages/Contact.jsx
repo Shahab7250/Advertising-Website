@@ -32,7 +32,7 @@ const contactInfo = [
   { icon: MapPin, label: 'Address', value: 'New Crown Art, Gaya, Bihar - 823001', href: 'https://www.google.com/maps/place/New+Crown+Art/@24.7950271,85.007296,20z/data=!4m10!1m2!2m1!1snew+crown+art+gaya+bihar!3m6!1s0x39f32b000d6c2be1:0x2025f26c80d807da!8m2!3d24.7947613!4d85.0075443!15sChhuZXcgY3Jvd24gYXJ0IGdheWEgYmloYXKSARJhZHZlcnRpc2luZ19hZ2VuY3ngAQA!16s%2Fg%2F11z8n5my8s' },
   { icon: Phone, label: 'Phone', value: '+91 99348 55079', href: 'tel:+919934855079' },
   { icon: Mail, label: 'Email', value: 'newcrown8550@gmail.com', href: 'mailto:newcrown8550@gmail.com' },
-  { icon: MessageCircle, label: 'WhatsApp', value: '+91 99348 55079', href: 'https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20have%20a%20query%20about%20my%20order.' },
+  { icon: MessageCircle, label: 'WhatsApp', value: '+91 99348 55079', href: 'https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20have%20a%20query%20about%20my%20order.' },
   { icon: Clock, label: 'Working Hours', value: 'Monday – Saturday: 9:00 AM – 7:00 PM', href: null },
 ]
 
@@ -227,7 +227,7 @@ export default function Contact() {
                     Thank you, <strong>{form.name}</strong>! We'll get back to you within 24 hours.
                   </p>
                   <a
-                    href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20have%20a%20query%20about%20my%20order."
+                    href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20have%20a%20query%20about%20my%20order."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"

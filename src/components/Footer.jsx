@@ -81,7 +81,7 @@ export default function Footer() {
               <p className="text-gray-400 text-sm mb-4">Premium quality {activeService.label.toLowerCase()} by New Crown Art, Gaya, Bihar.</p>
               <div className="flex gap-3">
                 <a
-                  href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(activeService.label)}`}
+                  href={`https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(activeService.label)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
@@ -134,7 +134,7 @@ export default function Footer() {
               {[
                 { icon: FacebookIcon, label: 'Facebook', href: 'https://www.facebook.com/share/1GNcngC8xJ/', hoverColor: 'hover:bg-[#1877F2]' },
                 { icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.com/newcrown8550?igsh=aTliMnV2MWg3Z2hm', hoverColor: 'hover:bg-[#E1306C]' },
-                { icon: WhatsAppIcon, label: 'WhatsApp', href: 'https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project.', hoverColor: 'hover:bg-[#25D366]' },
+                { icon: WhatsAppIcon, label: 'WhatsApp', href: 'https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project.', hoverColor: 'hover:bg-[#25D366]' },
               ].map(({ icon: Icon, label, href, hoverColor }) => (
                 <a
                   key={label}
@@ -231,7 +231,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
+                  href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 group cursor-pointer hover:bg-white/5 rounded-lg px-1 py-1 -mx-1 transition-all duration-200"

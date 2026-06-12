@@ -43,7 +43,7 @@ export default function Navbar() {
             Mon-Sat: 9:00 AM – 7:00 PM | Pan-India Service
           </span>
           <div className="hidden sm:flex items-center gap-4">
-            <a href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project." target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-1 text-green-400 hover:text-green-300 transition-colors">
+            <a href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project." target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-1 text-green-400 hover:text-green-300 transition-colors">
               <MessageCircle size={13} aria-hidden="true" /> WhatsApp
             </a>
             <span className="text-gray-300 text-xs">newcrown8550@gmail.com</span>

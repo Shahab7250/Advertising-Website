@@ -5,7 +5,7 @@ export default function FloatingWhatsApp() {
     <>
       {/* Floating button — hidden on mobile where sticky bar shows instead */}
       <a
-        href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
+        href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
@@ -22,7 +22,7 @@ export default function FloatingWhatsApp() {
       {/* Sticky bottom bar — mobile only */}
       <div className="fixed bottom-0 left-0 right-0 sm:hidden z-40 bg-green-500 text-white">
         <a
-          href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
+          href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
           className="flex items-center justify-center gap-2 py-3.5 font-bold text-base"
           target="_blank"
           rel="noopener noreferrer"

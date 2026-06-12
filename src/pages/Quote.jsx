@@ -122,7 +122,7 @@ export default function Quote() {
             <strong>{form.mobile}</strong> with a detailed quotation.
           </p>
           <a
-            href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20have%20submitted%20a%20quotation%20request%20and%20would%20like%20to%20follow%20up."
+            href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20have%20submitted%20a%20quotation%20request%20and%20would%20like%20to%20follow%20up."
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3.5 rounded-xl transition-colors shadow-lg"
@@ -524,7 +524,7 @@ export default function Quote() {
                     </div>
                   </a>
                   <a
-                    href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
+                    href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 hover:text-green-400 transition-colors"

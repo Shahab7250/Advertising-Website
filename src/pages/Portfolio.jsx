@@ -162,7 +162,7 @@ export default function Portfolio() {
               Get Free Quote <ArrowRight size={18} />
             </Link>
             <a
-              href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20discuss%20a%20signage%20project."
+              href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20discuss%20a%20signage%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border-2 border-[#C9A84C]/50 text-[#C9A84C] hover:bg-[#C9A84C]/10 font-bold px-8 py-4 rounded-xl transition-all"
