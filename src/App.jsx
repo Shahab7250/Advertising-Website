@@ -5,8 +5,6 @@ import FloatingQuoteWidget from './components/FloatingQuoteWidget'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Services from './pages/Services'
-import Portfolio from './pages/Portfolio'
-import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Quote from './pages/Quote'
 import Contact from './pages/Contact'
@@ -21,8 +19,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
             <Route path="/quote" element={<Quote />} />
             <Route path="/contact" element={<Contact />} />

@@ -450,10 +450,10 @@ export default function Home() {
               </h2>
             </div>
             <Link
-              to="/portfolio"
+              to="/services"
               className="inline-flex items-center gap-2 text-[#1E3A8A] font-bold text-sm hover:gap-3 transition-all"
             >
-              View Full Portfolio <ArrowRight size={16} />
+              View All Services <ArrowRight size={16} />
             </Link>
           </div>
 

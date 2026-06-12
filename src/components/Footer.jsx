@@ -23,8 +23,6 @@ const WhatsAppIcon = () => (
 const quickLinks = [
   { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Gallery', to: '/gallery' },
   { label: 'About Us', to: '/about' },
   { label: 'Get Quote', to: '/quote' },
   { label: 'Contact', to: '/contact' },

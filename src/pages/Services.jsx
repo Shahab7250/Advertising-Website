@@ -1,166 +1,205 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Layers, Lightbulb, Zap, Store, Type, Star, Box,
   FileImage, Megaphone, Palette, Eye, CreditCard,
   BookOpen, FileText, Image, ShoppingBag, Building2,
   Car, Radio, Navigation, PenTool, ChevronRight, Home,
-  MessageCircle,
 } from 'lucide-react'
 
 const services = [
   {
     icon: Layers,
     name: 'ACP Sign Boards',
+    category: 'ACP Boards',
     description: 'Aluminium composite panel boards are weather-resistant and provide a sleek, modern look for any business facade. Ideal for storefronts and commercial buildings.',
     color: '#1E3A8A',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/593347818/YE/PW/YL/45293610/acp-sign-board-500x500.jpg',
+    image: '/services/acp-sign-board.jpg',
   },
   {
     icon: Lightbulb,
     name: 'Glow Sign Boards',
+    category: 'Glow Signs',
     description: 'Illuminated signage ensures your brand is visible 24/7. Our glow sign boards use energy-efficient lighting to keep your business noticed even after dark.',
     color: '#F59E0B',
-    image: 'https://5.imimg.com/data5/OF/FY/BU/SELLER-3380324/glow-sign-board-1000x1000.jpg',
+    image: '/services/glow-sign-board.jpg',
   },
   {
     icon: Zap,
     name: 'LED Sign Boards',
+    category: 'LED Boards',
     description: 'Energy-efficient LED displays for maximum visual impact. Our LED boards are bright, long-lasting, and customizable for any branding requirement.',
     color: '#1D4ED8',
-    image: 'https://4.imimg.com/data4/YM/JM/MY-12149095/led-sign-board-1000x1000.jpg',
+    image: '/services/led-sign-board.jpg',
   },
   {
     icon: Store,
     name: 'Shop Sign Boards',
+    category: 'ACP Boards',
     description: 'Custom shop front signs that instantly communicate your brand identity. We design and fabricate signage that drives footfall and brand recognition.',
     color: '#7C3AED',
-    image: 'https://4.imimg.com/data4/NG/GC/MY-1937680/sign-board-1000x1000.jpg',
+    image: '/services/shop-sign-board.jpg',
   },
   {
     icon: Type,
     name: 'Stainless Steel Letters',
+    category: 'Steel Letters',
     description: 'Premium metallic 3D lettering perfect for corporate offices, luxury showrooms, and high-end retail. Available with backlit or front-lit options.',
     color: '#64748B',
-    image: 'https://5.imimg.com/data5/KG/FF/MY-29356796/stainless-steel-letter-signage-1000x1000.jpg',
+    image: '/services/stainless-steel-letters.jpg',
   },
   {
     icon: Star,
     name: 'Acrylic Letters',
+    category: 'Acrylic Letters',
     description: 'Vibrant colored acrylic letters that deliver stunning visual appeal. Lightweight, durable, and available in any color to match your brand.',
     color: '#EC4899',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2024/7/433496266/MY/ZF/KA/142456447/acp-with-acrylic-letters-1000x1000.jpg',
+    image: '/services/acrylic-letters.jpg',
   },
   {
     icon: Box,
     name: '3D Letter Signage',
+    category: 'Acrylic Letters',
     description: 'Three-dimensional lettering creates depth and a bold visual impact. These signs stand out and create a premium impression for your brand.',
     color: '#059669',
-    image: 'https://5.imimg.com/data5/KV/MU/OD/SELLER-14631917/3d-golden-letter-signage-board-1000x1000.jpg',
+    image: '/services/3d-letter-signage.jpg',
   },
   {
     icon: FileImage,
     name: 'Flex Banner Printing',
+    category: 'Flex Printing',
     description: 'High-resolution flex banners for outdoor advertising, events, exhibitions, and promotions. Durable, weather-resistant, and vibrant color output.',
     color: '#D97706',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg',
+    image: '/services/flex-banner.jpg',
   },
   {
     icon: Radio,
     name: 'Hoardings',
+    category: 'Hoardings',
     description: 'Large-format outdoor hoardings for maximum brand visibility in high-traffic areas. Perfect for product launches, brand awareness campaigns, and events.',
     color: '#1E3A8A',
-    image: 'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
+    image: '/services/hoardings.jpg',
   },
   {
     icon: Palette,
     name: 'Vinyl Printing',
+    category: 'Flex Printing',
     description: 'Durable vinyl prints for walls, floors, glass, and vehicles. Versatile applications with long-lasting color and sharp detail reproduction.',
     color: '#0891B2',
-    image: 'https://5.imimg.com/data5/MQ/LT/MY-4476066/vinyl-wrapping-sheet-1000x1000.jpg',
+    image: '/services/vinyl-printing.jpg',
   },
   {
     icon: Eye,
     name: 'One Way Vision Printing',
+    category: 'Flex Printing',
     description: 'Glass and window graphics with one-way vision technology. Promote your brand on glass surfaces while maintaining visibility from inside.',
     color: '#6D28D9',
-    image: 'https://5.imimg.com/data5/XB/VW/QU/SELLER-1940077/one-way-vision-printing-in-delhi-1000x1000.jpg',
+    image: '/services/one-way-vision.jpg',
   },
   {
     icon: CreditCard,
     name: 'Visiting Cards',
+    category: 'Print Media',
     description: 'Professional business card design and printing. High-quality cardstock options with matte, gloss, or spot UV finishes for a lasting impression.',
     color: '#1D4ED8',
-    image: 'https://4.imimg.com/data4/HA/WV/MY-6578878/spice-company-visiting-card-500x500.jpg',
+    image: '/services/visiting-cards.jpg',
   },
   {
     icon: BookOpen,
     name: 'Brochures',
+    category: 'Print Media',
     description: 'Multi-page marketing brochure design and printing. From bi-fold to catalog formats, we create brochures that effectively communicate your offerings.',
     color: '#1E3A8A',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2020/11/GS/ON/WX/13823199/brochure-printing-services-1000x1000.jpg',
+    image: '/services/brochures.jpg',
   },
   {
     icon: FileText,
     name: 'Flyers',
+    category: 'Print Media',
     description: 'Eye-catching single-page promotional flyers for events, offers, and campaigns. Fast turnaround with high-quality offset and digital printing.',
     color: '#059669',
-    image: 'https://5.imimg.com/data5/XE/QG/MY-11047000/cheap-flyer-printing-500x500.jpg',
+    image: '/services/flyers.jpg',
   },
   {
     icon: Image,
     name: 'Posters',
+    category: 'Print Media',
     description: 'Large format poster printing for retail displays, events, and advertising campaigns. Available in multiple sizes with vivid color accuracy.',
     color: '#7C3AED',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2023/6/316582468/HI/WX/CV/9417950/poster-printing-services-1000x1000.jpg',
+    image: '/services/posters.jpg',
   },
   {
     icon: ShoppingBag,
     name: 'Shop Branding',
+    category: 'Shop Branding',
     description: 'Complete shop interior and exterior branding solutions. From sign boards to wall graphics and display units, we transform your retail space.',
     color: '#F59E0B',
-    image: 'https://msmarcom.com/wp-content/uploads/2022/08/Retail-Branding-Agency-Gurgaon.jpg',
+    image: '/services/shop-branding.jpg',
   },
   {
     icon: Building2,
     name: 'Office Branding',
+    category: 'Office Branding',
     description: 'Professional office wall graphics, reception signage, and interior branding. Create an inspiring and branded workspace for your team and clients.',
     color: '#64748B',
-    image: 'https://www.e-arc.in/wp-content/uploads/2026/04/Office-Wall-Graphics.jpg',
+    image: '/services/office-branding.jpg',
   },
   {
     icon: Car,
     name: 'Vehicle Branding',
+    category: 'Vehicle Branding',
     description: 'Car and commercial vehicle wrapping and branding. Turn your fleet into moving billboards with eye-catching, durable vehicle graphics.',
     color: '#0891B2',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2021/10/ZY/AE/ID/30255346/vehicle-wrap-printing-service-1000x1000.jpeg',
+    image: '/services/vehicle-branding.jpg',
   },
   {
-    icon: Radio,
+    icon: Megaphone,
     name: 'Outdoor Advertising',
+    category: 'Hoardings',
     description: 'Complete outdoor advertising campaign solutions including hoardings, bus shelters, kiosks, and transit media for maximum reach.',
     color: '#1E3A8A',
-    image: 'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
+    image: '/services/outdoor-advertising.jpg',
   },
   {
     icon: Navigation,
     name: 'Indoor Signage',
+    category: 'Indoor Signage',
     description: 'Wayfinding systems, reception signage, and interior signage solutions. Help visitors navigate your space with clear, branded directional signage.',
     color: '#1D4ED8',
-    image: 'https://4.imimg.com/data4/KX/AK/MY-4263331/gcom-2-1000x1000.jpg',
+    image: '/services/indoor-signage.jpg',
   },
   {
     icon: PenTool,
     name: 'Graphic Design Services',
+    category: 'Graphic Design',
     description: 'Complete graphic design solutions for all your branding needs. Logo design, brand identity, and creative artworks for all print and digital formats.',
     color: '#EC4899',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2021/1/TT/XA/MM/111976666/graphic-design-services-1000x1000.jpg',
+    image: '/services/graphic-design.jpg',
   },
+]
+
+const filters = [
+  'All',
+  'ACP Boards',
+  'Glow Signs',
+  'LED Boards',
+  'Steel Letters',
+  'Acrylic Letters',
+  'Flex Printing',
+  'Shop Branding',
+  'Hoardings',
+  'Vehicle Branding',
+  'Indoor Signage',
+  'Office Branding',
+  'Print Media',
+  'Graphic Design',
 ]
 
 const toSlug = (name) => name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 
 export default function Services() {
+  const [activeFilter, setActiveFilter] = useState('All')
+
   useEffect(() => {
     document.title = 'Services — New Crown Art | ACP Boards, LED Signs, Branding & More'
     if (window.location.hash) {
@@ -171,6 +210,10 @@ export default function Services() {
       }, 100)
     }
   }, [])
+
+  const filtered = activeFilter === 'All'
+    ? services
+    : services.filter((s) => s.category === activeFilter)
 
   return (
     <>
@@ -204,26 +247,45 @@ export default function Services() {
       </section>
 
       {/* Services grid */}
-      <section className="py-20 bg-[#F9FAFB]" aria-labelledby="services-grid-heading">
+      <section className="py-16 bg-[#F9FAFB]" aria-labelledby="services-grid-heading">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
+
+          {/* Header */}
+          <div className="text-center mb-8">
             <span className="inline-block w-12 h-1 bg-[#1E3A8A] rounded mb-4" aria-hidden="true" />
             <h2 id="services-grid-heading" className="text-3xl font-black text-gray-900">
-              21 Specialised Services
+              {filtered.length} Specialised Services
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               Everything your business needs for visual branding, advertising, and signage — all under one roof.
             </p>
-            <span className="inline-block mt-4 bg-[#1E3A8A] text-white text-xs font-bold px-3 py-1 rounded-full">21 Services Available</span>
           </div>
 
+          {/* Filter buttons */}
+          <div className="flex flex-wrap gap-2 justify-center mb-10">
+            {filters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setActiveFilter(f)}
+                className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
+                  activeFilter === f
+                    ? 'bg-[#1E3A8A] text-white border-[#1E3A8A] shadow-md'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-[#1E3A8A] hover:text-[#1E3A8A]'
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, i) => (
+            {filtered.map((service, i) => (
               <article
                 key={service.name}
                 id={toSlug(service.name)}
                 className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:-translate-y-1 flex flex-col animate-fade-in-up"
-                style={{ animationDelay: `${(i % 6) * 0.08}s` }}
+                style={{ animationDelay: `${(i % 6) * 0.07}s` }}
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden bg-gray-100">
@@ -232,14 +294,18 @@ export default function Services() {
                     alt={service.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
-                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  {/* Service icon top left */}
+                  {/* Icon badge */}
                   <div className="absolute top-3 left-3 w-9 h-9 rounded-lg flex items-center justify-center text-white shadow-lg" style={{ backgroundColor: service.color }}>
                     <service.icon size={18} />
                   </div>
-                  {/* WhatsApp green bar at bottom of image */}
+                  {/* Category badge */}
+                  <div className="absolute top-3 right-3 bg-black/50 text-white text-[10px] font-bold px-2 py-1 rounded-full backdrop-blur-sm">
+                    {service.category}
+                  </div>
+                  {/* WhatsApp green bar */}
                   <a
                     href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20a%20quote%20for%20${encodeURIComponent(service.name)}`}
                     target="_blank"
@@ -253,7 +319,7 @@ export default function Services() {
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-bold text-gray-900 text-base mb-2">{service.name}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed flex-1">{service.description}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
                 </div>
               </article>
             ))}

@@ -5,8 +5,6 @@ import { Menu, X, ChevronDown, Phone, MessageCircle } from 'lucide-react'
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Gallery', to: '/gallery' },
   { label: 'About Us', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ]
