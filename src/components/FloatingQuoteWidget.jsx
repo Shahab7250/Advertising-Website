@@ -22,7 +22,7 @@ export default function FloatingQuoteWidget() {
     e.preventDefault()
     if (!form.name || !form.phone) return
     const msg = `Hello New Crown Art! 👋\n\nName: ${form.name}\nPhone: ${form.phone}\nService: ${form.service || 'Not specified'}\n\nPlease send me a quote.`
-    window.open(`https://wa.me/919934855079?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://api.whatsapp.com/send/?phone=919934855079&text=${encodeURIComponent(msg)}&type=phone_number&app_absent=0`, '_blank')
     setSent(true)
     setTimeout(() => { setSent(false); setForm({ name: '', phone: '', service: '' }); setOpen(false) }, 2500)
   }
@@ -126,7 +126,7 @@ export default function FloatingQuoteWidget() {
 
         {/* WhatsApp quick button */}
         <a
-          href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation."
+          href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation.&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
@@ -155,7 +155,7 @@ export default function FloatingQuoteWidget() {
           <Phone size={16} /> Call Now
         </a>
         <a
-          href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation."
+          href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation.&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-1.5 bg-green-500 text-white py-3.5 font-bold text-sm"

@@ -70,16 +70,18 @@ export default function Contact() {
     setSubmitting(true)
 
     const lines = [
-      `*New Inquiry from Website*`,
+      `*New Inquiry from New Crown Art Website*`,
       ``,
       `*Name:* ${form.name}`,
       `*Phone:* ${form.phone}`,
       form.email ? `*Email:* ${form.email}` : null,
       form.subject ? `*Subject:* ${form.subject}` : null,
-      `*Message:* ${form.message}`,
-    ].filter(Boolean).join('\n')
+      ``,
+      `*Message:*`,
+      form.message,
+    ].filter(line => line !== null).join('\n')
 
-    const url = `https://wa.me/919934855079?text=${encodeURIComponent(lines)}`
+    const url = `https://api.whatsapp.com/send/?phone=919934855079&text=${encodeURIComponent(lines)}&type=phone_number&app_absent=0`
     window.open(url, '_blank')
 
     setSubmitting(false)
