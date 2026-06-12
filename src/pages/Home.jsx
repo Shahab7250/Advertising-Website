@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   Shield, Palette, Clock, Wrench, Tag, MapPin,
   Layers, Lightbulb, Zap, Type, Star, Printer,
@@ -119,6 +119,8 @@ const marqueeItems = [
 ]
 
 export default function Home() {
+  const navigate = useNavigate()
+
   useEffect(() => {
     document.title = 'New Crown Art — Premium Sign Boards, Branding & Printing Solutions'
   }, [])
@@ -309,7 +311,8 @@ export default function Home() {
             {services.map(({ icon: Icon, name, description, image, color }, i) => (
               <article
                 key={name}
-                className="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+                onClick={() => navigate('/services')}
+                className="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up cursor-pointer"
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -341,6 +344,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`WhatsApp inquiry for ${name}`}
+                    onClick={(e) => e.stopPropagation()}
                     className="absolute bottom-3 right-3 w-10 h-10 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
                   >
                     <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-5 h-5 object-contain" />

@@ -205,26 +205,26 @@ export default function Footer() {
                   href="https://www.google.com/maps/place/New+Crown+Art/@24.7950271,85.007296,20z/data=!4m10!1m2!2m1!1snew+crown+art+gaya+bihar!3m6!1s0x39f32b000d6c2be1:0x2025f26c80d807da!8m2!3d24.7947613!4d85.0075443!15sChhuZXcgY3Jvd24gYXJ0IGdheWEgYmloYXKSARJhZHZlcnRpc2luZ19hZ2VuY3ngAQA!16s%2Fg%2F11z8n5my8s"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 group cursor-pointer"
+                  className="flex items-start gap-3 group cursor-pointer hover:bg-white/5 rounded-lg px-1 py-1 -mx-1 transition-all duration-200"
                 >
-                  <MapPin size={16} className="text-[#60A5FA] group-hover:text-white mt-0.5 shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-200">
+                  <MapPin size={16} className="text-[#60A5FA] group-hover:text-[#0D9488] mt-0.5 shrink-0 transition-colors duration-200" />
+                  <span className="text-sm text-gray-300 group-hover:text-white group-hover:underline transition-all duration-200">
                     New Crown Art, Gaya,<br />Bihar - 823001
                   </span>
                 </a>
               </li>
               <li>
-                <a href="tel:+919934855079" className="flex items-center gap-3 group cursor-pointer">
-                  <Phone size={16} className="text-[#60A5FA] group-hover:text-white shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-200">
+                <a href="tel:+919934855079" className="flex items-center gap-3 group cursor-pointer hover:bg-white/5 rounded-lg px-1 py-1 -mx-1 transition-all duration-200">
+                  <Phone size={16} className="text-[#60A5FA] group-hover:text-[#0D9488] shrink-0 transition-colors duration-200" />
+                  <span className="text-sm text-gray-300 group-hover:text-white group-hover:underline transition-all duration-200">
                     +91 99348 55079
                   </span>
                 </a>
               </li>
               <li>
-                <a href="mailto:newcrown8550@gmail.com" className="flex items-center gap-3 group cursor-pointer">
-                  <Mail size={16} className="text-[#60A5FA] group-hover:text-white shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-200">
+                <a href="mailto:newcrown8550@gmail.com" className="flex items-center gap-3 group cursor-pointer hover:bg-white/5 rounded-lg px-1 py-1 -mx-1 transition-all duration-200">
+                  <Mail size={16} className="text-[#60A5FA] group-hover:text-[#0D9488] shrink-0 transition-colors duration-200" />
+                  <span className="text-sm text-gray-300 group-hover:text-white group-hover:underline transition-all duration-200">
                     newcrown8550@gmail.com
                   </span>
                 </a>
@@ -234,10 +234,10 @@ export default function Footer() {
                   href="https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 group cursor-pointer"
+                  className="flex items-center gap-3 group cursor-pointer hover:bg-white/5 rounded-lg px-1 py-1 -mx-1 transition-all duration-200"
                 >
                   <MessageCircle size={16} className="text-green-400 group-hover:text-green-300 shrink-0 transition-colors duration-200" />
-                  <span className="text-sm text-gray-300 group-hover:text-green-400 transition-colors duration-200">
+                  <span className="text-sm text-gray-300 group-hover:text-green-400 group-hover:underline transition-all duration-200">
                     WhatsApp: +91 99348 55079
                   </span>
                 </a>
@@ -255,7 +255,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm text-gray-400">
-            &copy; 2025 New Crown Art. All Rights Reserved.
+            &copy; 2026 New Crown Art. All Rights Reserved.
           </p>
           <p className="text-sm text-gray-400">
             Advertising | Signage | Branding | Printing

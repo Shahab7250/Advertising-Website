@@ -165,15 +165,25 @@ export default function Contact() {
 
               {/* Map */}
               <div className="mt-6 rounded-xl overflow-hidden shadow-sm border border-gray-200">
-                <iframe
-                  src="https://maps.google.com/maps?q=24.7947613,85.0075443&z=18&output=embed"
-                  width="100%"
-                  height="220"
-                  style={{ border: 0, display: 'block' }}
-                  allowFullScreen
-                  loading="lazy"
-                  title="New Crown Art Location — Gaya, Bihar"
-                />
+                <a
+                  href="https://www.google.com/maps/place/New+Crown+Art/@24.7950271,85.007296,20z/data=!4m10!1m2!2m1!1snew+crown+art+gaya+bihar!3m6!1s0x39f32b000d6c2be1:0x2025f26c80d807da!8m2!3d24.7947613!4d85.0075443!15sChhuZXcgY3Jvd24gYXJ0IGdheWEgYmloYXKSARJhZHZlcnRpc2luZ19hZ2VuY3ngAQA!16s%2Fg%2F11z8n5my8s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative"
+                  aria-label="Open New Crown Art location in Google Maps"
+                >
+                  <iframe
+                    src="https://maps.google.com/maps?q=24.7947613,85.0075443&z=18&output=embed"
+                    width="100%"
+                    height="220"
+                    style={{ border: 0, display: 'block', pointerEvents: 'none' }}
+                    allowFullScreen
+                    loading="lazy"
+                    title="New Crown Art Location — Gaya, Bihar"
+                  />
+                  {/* Invisible overlay to capture clicks */}
+                  <div className="absolute inset-0" />
+                </a>
                 <a
                   href="https://www.google.com/maps/place/New+Crown+Art/@24.7950271,85.007296,20z/data=!4m10!1m2!2m1!1snew+crown+art+gaya+bihar!3m6!1s0x39f32b000d6c2be1:0x2025f26c80d807da!8m2!3d24.7947613!4d85.0075443!15sChhuZXcgY3Jvd24gYXJ0IGdheWEgYmloYXKSARJhZHZlcnRpc2luZ19hZ2VuY3ngAQA!16s%2Fg%2F11z8n5my8s"
                   target="_blank"
