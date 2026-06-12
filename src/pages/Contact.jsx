@@ -222,9 +222,12 @@ export default function Contact() {
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-5 mx-auto">
                     <CheckCircle size={32} className="text-green-600" aria-hidden="true" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-500 text-sm mb-4">
-                    Thank you, <strong>{form.name}</strong>! We'll get back to you within 24 hours.
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">WhatsApp Opened!</h3>
+                  <p className="text-gray-500 text-sm mb-1">
+                    Your message is ready in WhatsApp.
+                  </p>
+                  <p className="text-green-600 font-bold text-sm mb-4">
+                    Please press the Send (▶) button in WhatsApp to complete your inquiry.
                   </p>
                   <a
                     href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20have%20a%20query%20about%20my%20order."

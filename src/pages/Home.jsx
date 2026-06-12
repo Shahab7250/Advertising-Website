@@ -299,20 +299,20 @@ export default function Home() {
                 Our Core Services
               </h2>
             </div>
-            <button
-              onClick={() => navigate('/services')}
-              className="inline-flex items-center gap-2 text-[#0D9488] font-bold text-sm hover:gap-3 transition-all cursor-pointer"
+            <a
+              href="/services"
+              className="inline-flex items-center gap-2 text-[#0D9488] font-bold text-sm hover:gap-3 transition-all"
             >
               View All 21+ Services <ArrowRight size={16} />
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(({ icon: Icon, name, description, image, color }, i) => (
-              <article
+              <a
                 key={name}
-                onClick={() => navigate('/services')}
-                className="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up cursor-pointer"
+                href="/services"
+                className="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -350,7 +350,7 @@ export default function Home() {
                     <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-5 h-5 object-contain" />
                   </a>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
