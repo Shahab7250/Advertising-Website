@@ -68,10 +68,22 @@ export default function Contact() {
       return
     }
     setSubmitting(true)
-    setTimeout(() => {
-      setSubmitting(false)
-      setSubmitted(true)
-    }, 1000)
+
+    const lines = [
+      `*New Inquiry from Website*`,
+      ``,
+      `*Name:* ${form.name}`,
+      `*Phone:* ${form.phone}`,
+      form.email ? `*Email:* ${form.email}` : null,
+      form.subject ? `*Subject:* ${form.subject}` : null,
+      `*Message:* ${form.message}`,
+    ].filter(Boolean).join('\n')
+
+    const url = `https://wa.me/919934855079?text=${encodeURIComponent(lines)}`
+    window.open(url, '_blank')
+
+    setSubmitting(false)
+    setSubmitted(true)
   }
 
   return (
