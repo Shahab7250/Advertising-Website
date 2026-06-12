@@ -312,7 +312,7 @@ export default function Home() {
                 className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-56 overflow-hidden">
                   <img
                     src={image}
                     alt={name}
@@ -324,18 +324,20 @@ export default function Home() {
                   <div className="absolute top-3 left-3 w-9 h-9 rounded-xl flex items-center justify-center text-white shadow-lg" style={{ backgroundColor: color }}>
                     <Icon size={17} />
                   </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-gray-900 mb-2">{name}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
+                  {/* WhatsApp icon on image */}
                   <a
                     href={`https://wa.me/919934855079?text=Hello%20New%20Crown%20Art%2C%20I%20need%20inquiry%20for%20${encodeURIComponent(name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-green-700 hover:text-green-800 transition-colors"
+                    aria-label={`WhatsApp inquiry for ${name}`}
+                    className="absolute bottom-3 right-3 w-10 h-10 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
                   >
-                    <img src="/whatsapp-icon.avif" alt="" className="w-4 h-4 object-contain" aria-hidden="true" /> Enquire on WhatsApp
+                    <img src="/whatsapp-icon.avif" alt="WhatsApp" className="w-5 h-5 object-contain" />
                   </a>
+                </div>
+                <div className="px-4 py-2.5">
+                  <h3 className="font-bold text-gray-900 text-sm mb-1">{name}</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">{description}</p>
                 </div>
               </article>
             ))}

@@ -328,17 +328,20 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1E3A8A] py-16">
+      <section className="py-14 border-t-2 border-[#1E3A8A]/10" style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #F0F7FF 50%, #EEF2FF 100%)' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-white mb-4">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1E3A8A]/10 mb-5">
+            <ChevronRight size={26} className="text-[#1E3A8A]" aria-hidden="true" />
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-3">
             Can't find what you need?
           </h2>
-          <p className="text-blue-100 mb-8">
+          <p className="text-gray-500 mb-8 max-w-md mx-auto">
             Contact us directly and we'll create a custom solution tailored to your business requirements.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-white text-[#1E3A8A] hover:bg-gray-100 font-bold px-8 py-4 rounded-xl transition-all"
+            className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1E40AF] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             Contact Us
             <ChevronRight size={18} aria-hidden="true" />
