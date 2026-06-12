@@ -14,42 +14,42 @@ const services = [
     icon: Layers,
     name: 'ACP Sign Boards',
     description: 'Weather-resistant aluminium composite panel boards with a sleek modern look for any business facade.',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/593347818/YE/PW/YL/45293610/acp-sign-board-500x500.jpg',
+    image: '/services/acp-sign-board.jpg',
     color: '#1E3A8A',
   },
   {
     icon: Lightbulb,
     name: 'Glow Sign Boards',
     description: 'Illuminated signage that keeps your brand visible 24/7, even after dark.',
-    image: 'https://5.imimg.com/data5/OF/FY/BU/SELLER-3380324/glow-sign-board-1000x1000.jpg',
+    image: '/services/glow-sign-board.jpg',
     color: '#F59E0B',
   },
   {
     icon: Zap,
     name: 'LED Sign Boards',
     description: 'Energy-efficient LED displays delivering bright, vibrant, and long-lasting brand visibility.',
-    image: 'https://4.imimg.com/data4/YM/JM/MY-12149095/led-sign-board-1000x1000.jpg',
+    image: '/services/led-sign-board.jpg',
     color: '#1D4ED8',
   },
   {
     icon: Type,
     name: 'Stainless Steel Letters',
     description: 'Premium 3D metallic lettering for corporate offices, showrooms, and luxury establishments.',
-    image: 'https://5.imimg.com/data5/KG/FF/MY-29356796/stainless-steel-letter-signage-1000x1000.jpg',
+    image: '/services/stainless-steel-letters.jpg',
     color: '#64748B',
   },
   {
     icon: Star,
     name: 'Acrylic Letters',
     description: 'Vibrant colored acrylic letters for stunning visual appeal in retail and commercial spaces.',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2024/7/433496266/MY/ZF/KA/142456447/acp-with-acrylic-letters-1000x1000.jpg',
+    image: '/services/acrylic-letters.jpg',
     color: '#EC4899',
   },
   {
     icon: Printer,
     name: 'Flex Banner Printing',
     description: 'High-resolution flex banners for outdoor advertising, events, and major promotions.',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg',
+    image: '/services/flex-banner.jpg',
     color: '#059669',
   },
 ]
@@ -72,22 +72,22 @@ const process = [
 
 const featuredProjects = [
   {
-    name: 'The Food Street Mall',
-    location: 'Gurgaon',
+    name: 'Shop Branding',
+    location: 'Gaya, Bihar',
     category: 'Shop Branding',
-    image: 'https://msmarcom.com/wp-content/uploads/2022/08/Retail-Branding-Agency-Gurgaon.jpg',
+    image: '/services/shop-branding.jpg',
   },
   {
-    name: 'FMS Dental Hospital',
-    location: 'Hyderabad',
+    name: 'Glow Sign Boards',
+    location: 'Gaya, Bihar',
     category: 'Glow Signs',
-    image: 'https://5.imimg.com/data5/OF/FY/BU/SELLER-3380324/glow-sign-board-1000x1000.jpg',
+    image: '/services/glow-sign-board.jpg',
   },
   {
-    name: 'Puri Emporium',
-    location: 'Delhi',
-    category: '3D Letter Signage',
-    image: 'https://5.imimg.com/data5/KV/MU/OD/SELLER-14631917/3d-golden-letter-signage-board-1000x1000.jpg',
+    name: '3D Letter Signage',
+    location: 'Gaya, Bihar',
+    category: '3D Letters',
+    image: '/services/3d-letter-signage.jpg',
   },
 ]
 
@@ -192,7 +192,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-0.5 text-base"
                 >
-                  <MessageCircle size={18} aria-hidden="true" />
+                  <img src="/whatsapp-icon.avif" alt="" className="w-5 h-5 object-contain" aria-hidden="true" />
                   WhatsApp Us
                 </a>
                 <a
@@ -225,7 +225,7 @@ export default function Home() {
               {/* Main featured image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 h-56">
                 <img
-                  src="https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg"
+                  src="/services/hoardings.jpg"
                   alt="Outdoor hoarding advertisement"
                   className="w-full h-full object-cover"
                   onError={(e) => { e.target.style.display = 'none' }}
@@ -240,7 +240,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative rounded-xl overflow-hidden h-32 shadow-xl border border-white/10">
                   <img
-                    src="https://5.imimg.com/data5/OF/FY/BU/SELLER-3380324/glow-sign-board-1000x1000.jpg"
+                    src="/services/glow-sign-board.jpg"
                     alt="Glow sign board"
                     className="w-full h-full object-cover"
                     onError={(e) => { e.target.style.display = 'none' }}
@@ -250,7 +250,7 @@ export default function Home() {
                 </div>
                 <div className="relative rounded-xl overflow-hidden h-32 shadow-xl border border-white/10">
                   <img
-                    src="https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg"
+                    src="/services/flex-banner.jpg"
                     alt="Flex banner printing"
                     className="w-full h-full object-cover"
                     onError={(e) => { e.target.style.display = 'none' }}
@@ -334,7 +334,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-bold text-green-700 hover:text-green-800 transition-colors"
                   >
-                    <MessageCircle size={14} /> Enquire on WhatsApp
+                    <img src="/whatsapp-icon.avif" alt="" className="w-4 h-4 object-contain" aria-hidden="true" /> Enquire on WhatsApp
                   </a>
                 </div>
               </article>
@@ -561,11 +561,11 @@ export default function Home() {
         <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
           <div className="grid grid-cols-5 h-full opacity-[0.18]">
             {[
-              'https://5.imimg.com/data5/DV/PJ/OB/SELLER-8000506/outdoor-advertisement-hoardings-1000x1000.jpg',
-              'https://5.imimg.com/data5/SELLER/Default/2023/9/342393699/ZJ/OH/MQ/3016969/flex-banner-poster-1000x1000.jpg',
-              'https://5.imimg.com/data5/OF/FY/BU/SELLER-3380324/glow-sign-board-1000x1000.jpg',
-              'https://msmarcom.com/wp-content/uploads/2022/08/Retail-Branding-Agency-Gurgaon.jpg',
-              'https://4.imimg.com/data4/YM/JM/MY-12149095/led-sign-board-1000x1000.jpg',
+              '/services/hoardings.jpg',
+              '/services/flex-banner.jpg',
+              '/services/glow-sign-board.jpg',
+              '/services/shop-branding.jpg',
+              '/services/led-sign-board.jpg',
             ].map((src, i) => (
               <div key={i} style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100%' }} />
             ))}
