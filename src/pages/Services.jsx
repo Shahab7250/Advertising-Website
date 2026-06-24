@@ -270,12 +270,12 @@ export default function Services() {
           </div>
 
           {/* Filter buttons */}
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
+          <div className="flex overflow-x-auto gap-2 justify-start sm:justify-center mb-10 pb-2 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
             {filters.map((f) => (
               <button
                 key={f}
                 onClick={() => setActiveFilter(f)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
+                className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 whitespace-nowrap shrink-0 ${
                   activeFilter === f
                     ? 'bg-[#0D9488] text-white border-[#0D9488] shadow-md'
                     : 'bg-white text-gray-700 border-gray-200 hover:border-[#0D9488] hover:text-[#0D9488]'
@@ -287,7 +287,7 @@ export default function Services() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filtered.map((service, i) => (
               <article
                 key={service.name}
@@ -296,7 +296,7 @@ export default function Services() {
                 style={{ animationDelay: `${(i % 4) * 0.07}s` }}
               >
                 {/* Full-height image with text overlay */}
-                <div className="relative h-72 overflow-hidden bg-gray-100">
+                <div className="relative h-52 sm:h-60 md:h-72 overflow-hidden bg-gray-100">
                   <img
                     src={service.image}
                     alt={service.name}

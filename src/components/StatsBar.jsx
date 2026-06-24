@@ -31,11 +31,11 @@ export default function StatsBar() {
         <div className="absolute inset-0" style={{ background: 'rgba(15,15,26,0.78)' }} />
       </div>
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map(({ value, label }) => (
             <div key={label} className="text-center group">
-              <dt className="text-3xl sm:text-4xl font-black gold-shimmer mb-1">{value}</dt>
-              <dd className="text-gray-300 text-sm font-semibold tracking-wide uppercase">{label}</dd>
+              <dt className="text-2xl sm:text-3xl lg:text-4xl font-black gold-shimmer mb-1">{value}</dt>
+              <dd className="text-gray-300 text-xs sm:text-sm font-semibold tracking-wide uppercase">{label}</dd>
             </div>
           ))}
         </dl>

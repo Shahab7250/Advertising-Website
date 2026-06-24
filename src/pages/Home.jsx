@@ -169,20 +169,20 @@ export default function Home() {
                 India's Trusted Signage Partner Since 2015
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] mb-6 animate-fade-in-up">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] mb-6 animate-fade-in-up">
                 Your Brand{' '}
                 <span className="gold-shimmer">Deserves</span>
                 <br />to Stand Out
               </h1>
 
-              <p className="text-gray-200 text-lg leading-relaxed mb-8 animate-fade-in-up animation-delay-200 max-w-xl">
+              <p className="text-gray-200 text-base sm:text-lg leading-relaxed mb-8 animate-fade-in-up animation-delay-200 max-w-xl">
                 New Crown Art delivers premium sign boards, illuminated signage, flex printing, 3D letters, shop branding, and complete advertising solutions that make your business impossible to ignore.
               </p>
 
-              <div className="flex flex-wrap gap-4 mb-10 animate-fade-in-up animation-delay-300">
+              <div className="flex flex-wrap gap-3 mb-10 animate-fade-in-up animation-delay-300">
                 <Link
                   to="/quote"
-                  className="inline-flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-[#111827] text-base"
+                  className="inline-flex items-center gap-2 font-bold px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-[#111827] text-sm sm:text-base"
                   style={{ background: 'linear-gradient(135deg, #FFD700 0%, #C9A84C 50%, #A07832 100%)' }}
                 >
                   Get Free Quote
@@ -192,14 +192,14 @@ export default function Home() {
                   href="https://api.whatsapp.com/send/?phone=919934855079&text=Hello%20New%20Crown%20Art%2C%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20project."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-0.5 text-base"
+                  className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-0.5 text-sm sm:text-base"
                 >
                   <img src="/whatsapp-icon.avif" alt="" className="w-5 h-5 object-contain" aria-hidden="true" />
                   WhatsApp Us
                 </a>
                 <a
                   href="tel:+919934855079"
-                  className="inline-flex items-center gap-2 border-2 border-white/30 text-white hover:border-white/60 font-bold px-7 py-3.5 rounded-xl transition-all duration-200 text-base"
+                  className="inline-flex items-center gap-2 border-2 border-white/30 text-white hover:border-white/60 font-bold px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl transition-all duration-200 text-sm sm:text-base"
                 >
                   <Phone size={18} aria-hidden="true" />
                   Call Now
@@ -207,7 +207,7 @@ export default function Home() {
               </div>
 
               {/* Trust stats row */}
-              <div className="flex flex-wrap gap-8 animate-fade-in-up animation-delay-400 pt-2 border-t border-white/10">
+              <div className="flex flex-wrap gap-4 sm:gap-8 animate-fade-in-up animation-delay-400 pt-2 border-t border-white/10">
                 {[
                   { val: '2000+', lbl: 'Projects Done' },
                   { val: '10,000+', lbl: 'Happy Clients' },
@@ -281,7 +281,7 @@ export default function Home() {
       >
         <div className="flex gap-8 whitespace-nowrap" style={{ animation: 'marquee 30s linear infinite' }}>
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i} className="text-white font-bold text-sm uppercase tracking-widest flex items-center gap-4">
+            <span key={i} className="text-white font-bold text-xs sm:text-sm uppercase tracking-widest flex items-center gap-3 sm:gap-4">
               {item}
               <span className="text-white/40">✦</span>
             </span>

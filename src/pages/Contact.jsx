@@ -145,7 +145,7 @@ export default function Contact() {
               </p>
 
               {/* Contact items */}
-              <div className="space-y-5 mb-8">
+              <div className="space-y-4 mb-8">
                 {contactInfo.map(({ icon: Icon, label, value, href }) => (
                   href ? (
                     <a
@@ -153,7 +153,7 @@ export default function Contact() {
                       href={href}
                       target={href.startsWith('http') ? '_blank' : undefined}
                       rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-start gap-4 group cursor-pointer"
+                      className="flex items-start gap-3 sm:gap-4 group cursor-pointer"
                     >
                       <div className="w-10 h-10 bg-[#0D9488] group-hover:bg-[#0F766E] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5 transition-colors duration-200 group-hover:scale-110 transform">
                         <Icon size={18} aria-hidden="true" />
@@ -164,7 +164,7 @@ export default function Contact() {
                       </div>
                     </a>
                   ) : (
-                    <div key={label} className="flex items-start gap-4">
+                    <div key={label} className="flex items-start gap-3 sm:gap-4">
                       <div className="w-10 h-10 bg-[#0D9488] rounded-xl flex items-center justify-center text-white shrink-0 mt-0.5">
                         <Icon size={18} aria-hidden="true" />
                       </div>
@@ -189,8 +189,8 @@ export default function Contact() {
                   <iframe
                     src="https://maps.google.com/maps?q=24.7947613,85.0075443&z=18&output=embed"
                     width="100%"
-                    height="220"
-                    style={{ border: 0, display: 'block', pointerEvents: 'none' }}
+                    height="200"
+                    style={{ border: 0, display: 'block', pointerEvents: 'none', width: '100%' }}
                     allowFullScreen
                     loading="lazy"
                     title="New Crown Art Location — Gaya, Bihar"
@@ -276,7 +276,7 @@ export default function Contact() {
                       {errors.name && <p className="text-xs text-red-600 mt-1" role="alert">{errors.name}</p>}
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
                       {/* Phone */}
                       <div>
                         <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-700 mb-1.5">

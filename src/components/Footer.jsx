@@ -119,7 +119,7 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="New Crown Art Logo"
-                className="h-14 w-14 rounded-full object-cover ring-2 ring-[#C9A84C]"
+                className="h-12 w-12 sm:h-14 sm:w-14 rounded-full object-cover ring-2 ring-[#C9A84C]"
               />
               <div className="leading-tight">
                 <span className="block font-black text-lg text-white tracking-tight">NEW CROWN</span>
@@ -177,7 +177,7 @@ export default function Footer() {
               Our Services
               <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#1E3A8A]" aria-hidden="true" />
             </h2>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
+            <ul className="grid grid-cols-1 xs:grid-cols-2 gap-x-6 gap-y-2">
               {servicesList.map(({ label, image }) => (
                 <li key={label}>
                   <button

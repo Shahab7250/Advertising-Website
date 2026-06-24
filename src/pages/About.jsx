@@ -170,7 +170,7 @@ export default function About() {
                 { label: '3D Letter Signage', src: '/about/3d-signage.jpg' },
                 { label: 'Shop Branding', src: '/about/shop-branding.jpg' },
               ].map(({ label, src }) => (
-                <div key={label} className="rounded-2xl overflow-hidden h-52 relative group">
+                <div key={label} className="rounded-2xl overflow-hidden aspect-[3/2] sm:h-52 relative group">
                   <img
                     src={src}
                     alt={label}
@@ -233,7 +233,7 @@ export default function About() {
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
                   {/* Content */}
-                  <div className={`pl-12 sm:pl-0 sm:w-[45%] ${i % 2 === 0 ? 'sm:text-right sm:pr-10' : 'sm:pl-10'}`}>
+                  <div className={`pl-10 sm:pl-0 sm:w-[45%] ${i % 2 === 0 ? 'sm:text-right sm:pr-10' : 'sm:pl-10'}`}>
                     <div
                       className="inline-block bg-[#1E3A8A] text-white text-xs font-black px-3 py-1.5 rounded-full mb-2 tracking-wider"
                     >
@@ -337,7 +337,7 @@ export default function About() {
               We are a fully offline workshop — walk in, see our work, discuss your needs, and get it done right here in Gaya, Bihar.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-7">
             {workshopHighlights.map(({ icon: Icon, title, desc, color, gradient, link }, i) => (
               <div
                 key={title}
